@@ -1,0 +1,42 @@
+{
+    "success": true,
+    "last_updated": "2026-04-07T13:40:13+02:00",
+    "posts": [
+        {
+            "id": "69d4a07791b65d8c11030fd1",
+            "author": "Ren\u00e9 Schirner",
+            "date_de": "07. April 2026",
+            "date_en": "07 April, 2026",
+            "image_url": "backend\/image.php?id=69d4a07491b65d8c11030fcc",
+            "title_de": "Warum Inhalte im digitalen Zeitalter so wichtig sind",
+            "title_en": "Why Content Is So Important in the Digital Age",
+            "excerpt_de": "In der heutigen digitalen \u00c4ra, in der Informationen im \u00dcberfluss vorhanden sind und die Aufmerksamke...",
+            "excerpt_en": "In today's digital age, where information is abundant and attention spans are ever shorter, it is cr...",
+            "category": "Technologie"
+        },
+        {
+            "id": "69a00ee863afbbb915050220",
+            "author": "Fatlinda Berisha",
+            "date_de": "26. Februar 2026",
+            "date_en": "26 February, 2026",
+            "image_url": "backend\/image.php?id=69a00ed963afbbb91505021e",
+            "title_de": "ENTRIKS: Ihr Partner f\u00fcr Digitale Exzellenz",
+            "title_en": "ENTRIKS: Your Partner for Digital Excellence",
+            "excerpt_de": "In einer Welt, die sich st\u00e4ndig weiterentwickelt, ist digitale Transformation kein Trend mehr, sonde...",
+            "excerpt_en": "In a world that is constantly evolving, digital transformation is no longer a trend, but a necessity...",
+            "category": "Technologie"
+        },
+        {
+            "id": "698ee4f74e1b1cae900e720e",
+            "author": "Ren\u00e9 Schirner",
+            "date_de": "13. Februar 2026",
+            "date_en": "13 February, 2026",
+            "image_url": "backend\/image.php?id=698ee4e34e1b1cae900e720c",
+            "title_de": "KI-Revolution im Alltag: Mehr als nur ChatGPT \u2013 wie AI unser Leben unbemerkt pr\u00e4gt",
+            "title_en": "AI Revolution in Everyday Life: More than just ChatGPT \u2013 how AI shapes our lives unnoticed",
+            "excerpt_de": "K\u00fcnstliche Intelligenz (KI) ist in aller Munde, und oft denken wir dabei zuerst an beeindruckende Ch...",
+            "excerpt_en": "Artificial intelligence (AI) is on everyone's lips, and often we first think of impressive chatbots ...",
+            "category": "Technologie"
+        }
+    ]
+}

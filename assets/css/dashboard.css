@@ -1,0 +1,68 @@
+.input-field,
+.metadata-section select,
+.datetime-wrapper input,
+.file-input-label {
+    box-sizing: border-box;
+    width: 100%;
+    height: 42px;
+    min-height: 42px;
+    padding: 10px 12px;
+    font-size: 15px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #ffffff;
+    border-radius: 8px;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.file-input-label {
+    padding-left: 14px;
+    text-align: left;
+}
+
+.input-field:focus,
+.file-input-label:focus {
+    border-color: #7675ec;
+    box-shadow: 0 0 0 4px rgba(118,117,236,0.06);
+}
+
+.inline-toast {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(38,37,37,0.6);
+    z-index: 99999;
+    font-weight: 700;
+    font-family: Manrope, system-ui, sans-serif;
+    font-size: 13px;
+    color: #fff;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.inline-toast--info {
+    background: linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+}
+.inline-toast--error {
+    background: linear-gradient(135deg,#ef4444 0%,#dc2626 100%);
+}
+.inline-toast .toast-close {
+    margin-left: 8px;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.95);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+.inline-toast.hide {
+    opacity: 0;
+    transform: translateY(10px);
+}

@@ -1,0 +1,259 @@
+.custom-datetime-picker {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    flex-direction: row;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-top: 3px !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.custom-datetime-picker.open {
+    display: flex;
+}
+
+.picker-calendar {
+    padding: 16px;
+    min-width: 280px;
+    border-right: 1px solid #333;
+}
+
+.picker-calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.picker-calendar-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.picker-nav-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.picker-nav-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.picker-nav-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Calendar Grid */
+.picker-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 8px;
+}
+
+.picker-weekday {
+    font-size: 12px;
+    font-weight: 500;
+    color: #888;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.picker-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.picker-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    background: transparent;
+}
+
+.picker-day:hover:not(.disabled):not(.other-month) {
+    background: #333;
+}
+
+.picker-day.today {
+    color: #7675ec;
+    font-weight: 600;
+}
+
+.picker-day.selected {
+    background: #7675ec;
+    color: #fff;
+    font-weight: 600;
+}
+
+.picker-day.other-month {
+    color: #555;
+}
+
+.picker-day.disabled {
+    color: #444;
+    cursor: not-allowed;
+}
+
+/* Time Section */
+.picker-time {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+}
+
+.picker-time-header {
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.picker-time-list {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 280px;
+    padding: 8px;
+}
+
+.picker-time-slot {
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.picker-time-slot:hover {
+    background: #333;
+    color: #fff;
+}
+
+.picker-time-slot.selected {
+    background: #7675ec;
+    color: #fff;
+    font-weight: 500;
+}
+
+.picker-time-slot.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Scrollbar Styling */
+.picker-time-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.picker-time-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.picker-time-list::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+
+.picker-time-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Footer Actions */
+.picker-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 12px 16px;
+    border-top: 1px solid #333;
+    background: #1a1a1a;
+}
+
+.picker-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.picker-btn-clear {
+    background: transparent;
+    color: #888;
+}
+
+.picker-btn-clear:hover {
+    color: #fff;
+    background: #333;
+}
+
+.picker-btn-today {
+    background: transparent;
+    color: #7675ec;
+}
+
+.picker-btn-today:hover {
+    background: rgba(118, 117, 236, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .custom-datetime-picker {
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .picker-calendar {
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .picker-time {
+        width: 100%;
+        max-height: 150px;
+    }
+
+    .picker-time-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        max-height: 120px;
+    }
+
+    .picker-time-slot {
+        flex: 0 0 calc(33.33% - 4px);
+    }
+}

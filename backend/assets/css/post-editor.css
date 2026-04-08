@@ -1,0 +1,1596 @@
+.block-palette {
+    background: #262525;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.block-palette h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+}
+
+.block-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: move;
+    transition: all 0.2s;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+.block-item:hover {
+    background: #333;
+    transform: translateX(4px);
+}
+
+.block-item svg {
+    width: 18px;
+    height: 18px;
+    color: #7675ec;
+}
+
+.content-editor {
+    background: #262525;
+    padding: 24px;
+    border-radius: 12px;
+    min-height: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.editor-block {
+    background: #1a1a1a;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 2px solid transparent;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.editor-block:hover {
+    border-color: #7675ec;
+}
+
+.editor-block.dragging {
+    opacity: 0.5;
+}
+
+.block-controls {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.editor-block:hover .block-controls {
+    opacity: 1;
+}
+
+.block-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.block-btn.delete {
+    background: #dc2626;
+    color: white;
+}
+
+.block-btn.delete:hover {
+    background: #b91c1c;
+}
+
+.block-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.editor-block input,
+.editor-block textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.editor-block input:focus,
+.editor-block textarea:focus {
+    outline: none;
+}
+
+.editor-block input[type="text"] {
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+.editor-block textarea {
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 80px;
+}
+
+/* Ensure inputs inside headings inherit the heading size and weight */
+.editor-block h1 input[type="text"],
+.editor-block h2 input[type="text"],
+.editor-block h3 input[type="text"],
+.editor-block h4 input[type="text"],
+.editor-block h5 input[type="text"],
+.editor-block h6 input[type="text"] {
+    font-size: inherit;
+    font-weight: 700 !important;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    background: transparent;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+}
+
+.heading-input-wrapper {
+    min-height: auto;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+/* Heading Select needs to match font-size-select */
+.heading-level-select {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ccc;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+}
+
+.heading-level-select:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.heading-level-select option {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.editor-block h1 input[type="text"]::placeholder,
+.editor-block h2 input[type="text"]::placeholder,
+.editor-block h3 input[type="text"]::placeholder,
+.editor-block h4 input[type="text"]::placeholder,
+.editor-block h5 input[type="text"]::placeholder,
+.editor-block h6 input[type="text"]::placeholder {
+    font-weight: 700 !important;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.editor-block h1,
+.editor-block h2,
+.editor-block h3,
+.editor-block h4,
+.editor-block h5,
+.editor-block h6 {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.editor-block h1 {
+    font-size: 40px;
+}
+
+.editor-block h2 {
+    font-size: 36px;
+}
+
+.editor-block h3 {
+    font-size: 27px;
+}
+
+.editor-block h4 {
+    font-size: 20px;
+}
+
+.editor-block h5 {
+    font-size: 18px;
+}
+
+.editor-block h6 {
+    font-size: 14px;
+}
+
+.editor-block blockquote {
+    border-left: 4px solid #7675ec;
+    padding-left: 16px;
+    margin: 0;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.editor-block ul,
+.editor-block ol {
+    margin: 0;
+    padding-left: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.editor-block li {
+    margin-bottom: 8px;
+}
+
+.rich-text-content {
+    min-height: 24px;
+    outline: none;
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 16px;
+    width: 100%;
+    word-break: break-word;
+}
+
+.rich-text-content:empty:before {
+    content: attr(data-placeholder);
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+.rich-text-content a {
+    color: #7675ec;
+    text-decoration: underline;
+}
+
+/* Ensure headings inside editor also use white color */
+.editor-block h1,
+.editor-block h2,
+.editor-block h3,
+.editor-block h4,
+.editor-block h5,
+.editor-block h6 {
+    color: #ffffff;
+}
+
+.drop-zone {
+    border: 2px dashed #444;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-zone.drag-over {
+    border-color: #7675ec;
+    background: rgba(118, 117, 236, 0.1);
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.file-input-wrapper input[type="file"] {
+    display: none;
+}
+
+.file-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 14px;
+    padding-right: 44px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    text-align: left;
+    position: relative;
+}
+
+.file-input-label:hover {
+    border-color: #7675ec;
+    background: rgba(118, 117, 236, 0.05);
+}
+
+.file-input-label svg {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #fff;
+}
+
+.file-input-icon {
+    display: none;
+}
+
+.file-input-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+}
+
+.thumbnail-preview {
+    margin-top: 12px;
+    display: none;
+    position: relative;
+}
+
+.thumbnail-preview.active {
+    display: block;
+}
+
+.thumbnail-preview img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.thumbnail-preview .remove-thumb {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.thumbnail-preview .remove-thumb:hover {
+    background: #dc2626;
+}
+
+.thumbnail-preview .remove-thumb svg {
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+}
+
+@media (max-width: 968px) {
+    .metadata-section {
+        grid-template-columns: 1fr;
+    }
+
+    .create-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Action Buttons */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-submit {
+    padding: 12px 28px;
+    background: #7675ec;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background: #5755d9;
+}
+
+.metadata-section {
+    background: #262525;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.metadata-section .full-width {
+    grid-column: 1 / -1;
+}
+
+.metadata-section label {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+
+.create-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Content blocks styles have been moved to ../assets/css/content-blocks.css */
+
+@media (max-width: 968px) {
+    .metadata-section {
+        grid-template-columns: 1fr;
+    }
+
+    .create-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-submit {
+    padding: 12px 28px;
+    background: #7675ec;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background: #5b5ad8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(118, 117, 236, 0.4);
+}
+
+/* Inline icon spacing for submit buttons */
+.btn-submit .btn-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.btn-submit span {
+    vertical-align: middle;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Small, scoped styles for the schedule picker icon to match create.php */
+input[type="datetime-local"].no-native {
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 44px;
+    /* reserve space for custom icon */
+}
+
+input[type="datetime-local"].no-native::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.datetime-wrapper {
+    position: relative;
+}
+
+.datetime-wrapper .datetime-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Image Upload/URL Row - truncate long names */
+.image-source-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.uploaded-file-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #9ca3af;
+    font-size: 13px;
+    max-width: 200px;
+    /* Limit width to ensure it truncates */
+}
+
+.image-url-input {
+    flex: 1;
+}
+
+.metadata-section {
+    background: #262525;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* Post Editor Topbar */
+.topbar {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #1f2937;
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+    }
+}
+
+.metadata-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.metadata-section .full-width {
+    grid-column: 1 / -1;
+}
+
+.metadata-section label {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.create-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+    /* Prevent overflow */
+}
+
+/* Actions */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-preview,
+.btn-save,
+.btn-publish {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.3px;
+    height: 46px;
+    box-sizing: border-box;
+}
+
+.btn-preview,
+.btn-save {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-publish {
+    background: linear-gradient(135deg, #7675ec, #d225d7);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(118, 117, 236, 0.3);
+}
+
+.btn-preview:active,
+.btn-save:active,
+.btn-publish:active {
+    transform: translateY(0);
+}
+
+/* Formatting toolbar responsiveness */
+.formatting-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    background: #1a1a1a;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 640px) {
+    .formatting-toolbar {
+        justify-content: center;
+    }
+
+    .format-btn {
+        padding: 6px;
+    }
+
+    .font-size-select,
+    .heading-level-select {
+        flex: 1 1 100%;
+        margin-top: 4px;
+    }
+}
+
+/* Metadata section refinement */
+@media (max-width: 768px) {
+    .metadata-section {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .metadata-section>div {
+        width: 100%;
+    }
+
+    .create-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .block-palette {
+        order: 2;
+        /* Move palette below editor on mobile for better focus */
+    }
+
+    .editor-container {
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-editor {
+        padding: 12px;
+    }
+
+    .editor-block {
+        padding: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Block Palette */
+.block-palette {
+    background: #262525;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.block-palette h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+}
+
+.block-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: move;
+    transition: all 0.2s;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+.block-item:hover {
+    background: #333;
+    transform: translateX(4px);
+}
+
+.block-item svg {
+    width: 18px;
+    height: 18px;
+    color: #7675ec;
+}
+
+/* Content Editor */
+.content-editor {
+    background: #262525;
+    padding: 24px;
+    border-radius: 12px;
+    min-height: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.editor-block {
+    background: #1a1a1a;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 2px solid transparent;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.editor-block:hover {
+    border-color: #7675ec;
+}
+
+.editor-block.dragging {
+    opacity: 0.5;
+}
+
+.block-controls {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.editor-block:hover .block-controls {
+    opacity: 1;
+}
+
+.block-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.block-btn.delete {
+    background: #dc2626;
+    color: white;
+}
+
+.block-btn.delete:hover {
+    background: #b91c1c;
+}
+
+.block-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Block Inputs */
+.editor-block input,
+.editor-block textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: inherit;
+    resize: vertical;
+}
+
+/* Small, scoped styles for the schedule picker icon
+           - do not override global theme colors; inherit them
+           - only affect inputs with class `no-native` */
+input[type="datetime-local"].no-native {
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 44px;
+    /* reserve space for custom icon */
+}
+
+input[type="datetime-local"].no-native::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.datetime-wrapper {
+    position: relative;
+}
+
+.datetime-wrapper .datetime-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.editor-block input:focus,
+.editor-block textarea:focus {
+    outline: none;
+}
+
+.editor-block input[type="text"] {
+    font-size: 16px;
+    padding: 8px 0;
+}
+
+.editor-block textarea {
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 80px;
+}
+
+.editor-block h1,
+.editor-block h2,
+.editor-block h3 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.editor-block h1 {
+    font-size: 32px;
+}
+
+.editor-block h2 {
+    font-size: 28px;
+}
+
+.editor-block h3 {
+    font-size: 24px;
+}
+
+.editor-block blockquote {
+    border-left: 4px solid #7675ec;
+    padding-left: 16px;
+    margin: 0;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.editor-block ul,
+.editor-block ol {
+    margin: 0;
+    padding-left: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.editor-block li {
+    margin-bottom: 8px;
+}
+
+/* Colored list markers (bullets and numbers) */
+.editor-block ul.editor-list,
+.editor-block ol.editor-list {
+    list-style-position: outside;
+    padding-left: 28px;
+}
+
+.editor-block ul.editor-list li::marker,
+.editor-block ol.editor-list li::marker {
+    font-weight: 600;
+}
+
+/* List item styling for editor */
+.editor-list-item {
+    display: list-item;
+    padding: 2px 0;
+    margin-bottom: 4px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Wrapper for content + button to align them */
+.li-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+
+.editor-list-item:hover .remove-list-item {
+    opacity: 1;
+}
+
+.editor-list-item .rich-text-content {
+    flex: 1;
+    min-height: auto !important;
+    padding: 6px 0 !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: inherit !important;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    min-width: 50px;
+}
+
+.editor-list-item .rich-text-content:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Remove button styling */
+.remove-list-item {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    background: #333;
+    color: #ccc;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    opacity: 1;
+    /* Always visible */
+    transition: all 0.2s;
+    margin-top: 6px;
+    /* Align with text line */
+}
+
+.remove-list-item:hover {
+    background: #dc2626;
+    color: white;
+}
+
+/* "Add item" button in the footer */
+.list-footer {
+    margin-top: 8px;
+    padding-left: 28px;
+    /* Align with text content */
+}
+
+.add-list-item {
+    background: #7675ec;
+    color: #ffffff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(118, 117, 236, 0.3);
+}
+
+/* Hover effect removed as requested */
+.add-list-item:hover {
+    /* No change on hover */
+    background: #7675ec;
+    transform: none;
+    box-shadow: 0 2px 4px rgba(118, 117, 236, 0.3);
+}
+
+.drop-zone {
+    border: 2px dashed #444;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-zone.drag-over {
+    border-color: #7675ec;
+    background: rgba(118, 117, 236, 0.1);
+}
+
+.file-input-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.file-input-wrapper input[type="file"] {
+    display: none;
+}
+
+.file-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 8px 14px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    text-align: left;
+    position: relative;
+    height: 52px;
+    box-sizing: border-box;
+}
+
+.file-input-label:hover {
+    border-color: #7675ec;
+    background: rgba(118, 117, 236, 0.05);
+}
+
+.file-input-label svg {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #fff;
+}
+
+.file-input-icon {
+    display: none;
+}
+
+.file-input-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+}
+
+/* Thumbnail Preview */
+.thumbnail-preview {
+    margin-top: 12px;
+    display: none;
+    position: relative;
+}
+
+.thumbnail-preview.active {
+    display: block;
+}
+
+.thumbnail-preview img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.thumbnail-preview .remove-thumb {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.thumbnail-preview .remove-thumb:hover {
+    background: #dc2626;
+}
+
+.thumbnail-preview .remove-thumb svg {
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+}
+
+@media (max-width: 968px) {
+    .metadata-section {
+        grid-template-columns: 1fr;
+    }
+
+    .create-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Action Buttons */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-submit {
+    padding: 12px 20px;
+    background: #7675ec;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background: #5b5ad8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(118, 117, 236, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Rich Text Formatting Toolbar */
+.formatting-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #232323;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.format-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.format-btn:hover {
+    background: #7675ec;
+    border-color: #7675ec;
+}
+
+.format-btn.active {
+    background: #7675ec;
+    border-color: #7675ec;
+}
+
+.format-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.format-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 4px;
+}
+
+.font-size-select {
+    padding: 6px 10px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    min-width: 70px;
+}
+
+.font-size-select:focus {
+    outline: none;
+    border-color: #7675ec;
+}
+
+.color-picker-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.color-picker-wrapper input[type="color"] {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+}
+
+.color-picker-wrapper input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 2px;
+}
+
+.color-picker-wrapper input[type="color"]::-webkit-color-swatch {
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.color-input {
+    width: 80px;
+    padding: 6px 8px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.color-input:focus {
+    outline: none;
+    border-color: #7675ec;
+}
+
+.color-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.rich-text-content {
+    min-height: 80px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+    outline: none;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.editor-list-item .rich-text-content {
+    color: #fff !important;
+}
+
+/* Ensure editor list markers inherit color */
+.editor-list {
+    color: inherit;
+}
+
+.editor-list li {
+    color: inherit;
+    /* Marker takes this color */
+}
+
+.editor-list li .rich-text-content {
+    color: #fff;
+}
+
+.rich-text-content:focus {
+    border-color: rgba(118, 117, 236, 0.5);
+}
+
+.rich-text-content:empty:before {
+    content: attr(data-placeholder);
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
+
+/* Remove underline from links while keeping them active */
+.rich-text-content a,
+.editor-block a {
+    text-decoration: none;
+    color: #7675ec;
+    cursor: pointer;
+}
+
+.rich-text-content a:hover,
+.editor-block a:hover {
+    color: #5b5ad8;
+}
+
+
+/* Interactive Tag Input Styles */
+.tag-input-wrapper {
+    width: 100%;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    min-height: 52px;
+    cursor: text;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+.tag-container:focus-within {
+    border-color: #7675ec;
+    box-shadow: 0 0 0 2px rgba(118, 117, 236, 0.1);
+}
+
+.tag-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #7675ec;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: fadeIn 0.2s;
+}
+
+.tag-pill .tag-remove {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 6px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.tag-pill .tag-remove:hover {
+    color: white;
+}
+
+.tag-input-field {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    font-family: inherit;
+    flex: 1;
+    min-width: 120px;
+    padding: 4px 0;
+}
+
+.tag-input-field::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.tag-helper,
+.field-helper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tag-helper .helper-text,
+.field-helper .helper-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tag-helper .helper-text svg,
+.field-helper .helper-text svg {
+    width: 14px;
+    height: 14px;
+    color: #7675ec;
+}
+
+.tag-helper .tag-count {
+    color: #7675ec;
+    font-weight: 500;
+}
+
+/* Custom Color Link/Palette Styling */
+.color-palette {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 8px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 8px;
+}
+
+.color-swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.color-swatch.active {
+    border-color: #fff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Hide native datalist arrow */
+.tag-input-field::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+
+/* Custom Select Dropdown Styling */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+    flex: 2;
+}
+
+/* Unify all metadata input-fields to 52px */
+.metadata-section .input-field {
+    height: 52px;
+    padding: 10px 14px;
+    box-sizing: border-box;
+}
+
+.select-wrapper .input-field {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px !important;
+}
+
+.select-wrapper .select-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    transition: color 0.2s;
+}
+
+.select-wrapper:focus-within .select-icon {
+    color: #7675ec;
+}
+
+.select-wrapper .input-field:hover {
+    border-color: #7675ec;
+    background: rgba(118, 117, 236, 0.05);
+}
+
+.select-wrapper select option {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Global Preloader Styles Removed - Using dashboard.css standard */

@@ -1,0 +1,20 @@
+# Sessions (Private data)
+backend/sessions/*
+!backend/sessions/.gitkeep
+
+# Local Environment
+.env
+.DS_Store
+Thumbs.db
+
+# Gemini/AI related
+.gemini/
+.agent/
+
+# Temp files
+*.tmp
+*.log
+xampp/
+
+# Composer dependencies
+backend/vendor/
