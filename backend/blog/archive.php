@@ -39,6 +39,9 @@ try {
     $result = $db->blog->updateOne($filter, [
         '$set' => ['status' => 'archived']
     ]);
+    if ($result->getModifiedCount() > 0) {
+        include 'cache_featured.php';
+    }
     echo json_encode(['success' => $result->getModifiedCount() > 0]);
 } catch (Exception $e) {
     echo json_encode(['success' => false, 'error' => $e->getMessage()]);

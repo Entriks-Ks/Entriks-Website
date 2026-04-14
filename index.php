@@ -66,8 +66,25 @@ $cacheFile = 'backend/static/featured.json';
 
 if (file_exists($cacheFile)) {
   $cacheData = json_decode(file_get_contents($cacheFile), true);
-  if ($cacheData && !empty($cacheData['posts'])) {
+  if ($cacheData && !empty($cacheData['posts']) && isset($db)) {
+    // Validate cached posts still exist in database
+    $validPosts = [];
     foreach ($cacheData['posts'] as $p) {
+      try {
+        $postId = new MongoDB\BSON\ObjectId($p['id']);
+        $exists = $db->blog->findOne(
+          ['_id' => $postId, 'status' => 'published'],
+          ['projection' => ['_id' => 1]]
+        );
+        if ($exists) {
+          $validPosts[] = $p;
+        }
+      } catch (Exception $e) {
+        // Invalid ID format, skip
+      }
+    }
+    
+    foreach ($validPosts as $p) {
       $title = $lang === 'en' ? ($p['title_en'] ?? $p['title'] ?? 'No Title') : ($p['title_de'] ?? $p['title'] ?? 'No Title');
       $excerpt = $lang === 'en' ? ($p['excerpt_en'] ?? '') : ($p['excerpt_de'] ?? $p['excerpt'] ?? '');
       $date = $lang === 'en' ? ($p['date_en'] ?? $p['date'] ?? '') : ($p['date_de'] ?? $p['date'] ?? '');
@@ -3811,14 +3828,6 @@ function getCmsContent($key, $default = '') {
         <a href="#blog">Blog</a>
         <a href="#about"><?php echo $lang === 'de' ? 'Über uns' : 'About Us'; ?></a>
         <a href="#kontakt"><?php echo $lang === 'de' ? 'Kontakt' : 'Contact'; ?></a>
-        <div style="display:flex;align-items:center;gap:.75rem;margin-top:.5rem;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:#bbb;flex-shrink:0;">
-            <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          <a href="?lang=de" class="lang-btn <?php echo $lang === 'de' ? 'active' : ''; ?>" data-lang="de" style="color:<?php echo $lang === 'de' ? 'var(--gold)' : '#888'; ?>;font-weight:<?php echo $lang === 'de' ? '700' : '400'; ?>">DE</a>
-          <span style="color:#555;">|</span>
-          <a href="?lang=en" class="lang-btn <?php echo $lang === 'en' ? 'active' : ''; ?>" data-lang="en" style="color:<?php echo $lang === 'en' ? 'var(--gold)' : '#888'; ?>;font-weight:<?php echo $lang === 'en' ? '700' : '400'; ?>">EN</a>
-        </div>
       </div>
     </nav>
     

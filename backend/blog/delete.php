@@ -63,6 +63,9 @@ try {
 // 3. Delete the post itself
 $db->blog->deleteOne($filter);
 
+// 4. Regenerate featured cache so deleted post no longer appears on homepage
+include 'cache_featured.php';
+
 // Set success message
 $_SESSION['toast_message'] = sprintf($lang['msg_post_deleted'] ?? 'Post deleted successfully! (Removed %d comment(s) and associated data)', $commentCount);
 $_SESSION['toast_type'] = 'success';

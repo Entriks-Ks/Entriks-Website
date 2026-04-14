@@ -69,8 +69,11 @@ function seedPage($pageId, $filePath, $db)
 // Seed Index (German)
 seedPage('home', '../index.php', $db);
 
-// Seed Index (English)
-seedPage('home_en', '../index-en.php', $db);
+// Note: English version (index-en.php) doesn't exist in this project
+// Uncomment below if you create an English version:
+// if (file_exists('../index-en.php')) {
+//     seedPage('home_en', '../index-en.php', $db);
+// }
 
 echo 'Seeding Complete.';
 ?>
