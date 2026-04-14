@@ -292,17 +292,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <div class="input-group">
 
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-
-                            <label for="password" style="margin-bottom:0;"><?= $lang['login_password_label'] ?></label>
-
-                        </div>
+                        <label for="password"><?= $lang['login_password_label'] ?></label>
 
                         <div class="input-wrapper">
 
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="input-icon">
 
-                                <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25zm3.75 8.25v-3a3.75 3.75 0 10-7.5 0v3h7.5z" clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 10-7.5 0v3h7.5Z" clip-rule="evenodd" />
 
                             </svg>
 
@@ -329,6 +325,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 </svg>
 
                             </button>
+
+                        </div>
+
+                        <div style="text-align:right; margin-top:6px;">
+
+                            <a href="forgot_password.php" style="font-size:12px; color:var(--gold); text-decoration:none;">Passwort vergessen?</a>
 
                         </div>
 
