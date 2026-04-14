@@ -210,9 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div class="blur-bg-theme top-left"></div>
 
-        <div class="blur-bg-theme bottom-right"></div>
-
-        
+        <div class="blur-bg-theme bottom-right"></div> 
 
         <div class="login-container">
 

@@ -26,6 +26,7 @@ $socialFacebook = 'https://www.facebook.com/ENTRIKS/';
 $socialInstagram = 'https://www.instagram.com/entriks_/';
 $siteFaviconUrl = 'assets/img/favicon.png';
 $logoUrl = 'assets/img/logo.png';
+$footerLogoUrl = 'assets/img/logo.png';
 $blogShowRecent = true;
 $blogShowCategories = true;
 $blogShowTags = true;

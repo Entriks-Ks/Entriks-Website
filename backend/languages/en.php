@@ -198,7 +198,7 @@ return [
     'label_footer_en' => 'Footer Text',
     'hint_footer_en' => 'Text displayed in the footer of the English page',
     'label_footer_logo_url' => 'Footer Logo URL',
-    'hint_footer_logo_url' => 'Path to the footer logo image (e.g., assets/img/white-logo.png)',
+    'hint_footer_logo_url' => 'Path to the footer logo image (e.g., assets/img/logo.png)',
     'action_save_changes' => 'Save Changes',
     // Blog Create/Edit
     'create_post_title' => 'Create New Post',

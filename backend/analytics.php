@@ -298,7 +298,6 @@ $sidebarVariant = 'dashboard';
         <main class="content ana-dashboard">
             <!-- Blur Background Theme -->
             <div class="blur-bg-theme bottom-right"></div>
-            <div class="blur-bg-theme top-left"></div>
 
             <!-- Header Section -->
     <?php

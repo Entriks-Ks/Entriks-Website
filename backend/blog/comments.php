@@ -1092,6 +1092,55 @@ if (!empty($parentIds)) {
             color: #fff;
         }
 
+        /* Empty State Styles */
+        .empty-state-row {
+            display: table-row;
+        }
+        .comments-table:has(.empty-state-row),
+        .comments-table-empty {
+            min-width: 100% !important;
+        }
+        .empty-state-cell {
+            padding: 60px 24px !important;
+            text-align: center;
+            position: relative;
+        }
+        .empty-state-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            min-width: 320px;
+        }
+        .empty-state-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+        }
+        .empty-state-icon svg {
+            width: 36px;
+            height: 36px;
+            color: white;
+        }
+        .empty-state-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+        }
+        .empty-state-subtitle {
+            font-size: 14px;
+            color: #9ca3af;
+            margin: 0;
+            max-width: 300px;
+        }
+
     </style>
 
 </head>
@@ -1117,7 +1166,6 @@ if (!empty($parentIds)) {
         <main class="content">
             <!-- Blur Background Theme -->
             <div class="blur-bg-theme bottom-right"></div>
-            <div class="blur-bg-theme top-left"></div>
 
             <?php
 
@@ -1274,7 +1322,7 @@ if (!empty($parentIds)) {
 
                 <div class="comments-table-scroll">
 
-                <table class="comments-table">
+                <table class="comments-table <?= empty($comments) ? 'comments-table-empty' : '' ?>">
 
                     <thead>
 
@@ -1300,11 +1348,7 @@ if (!empty($parentIds)) {
 
                             <th style="min-width: 120px;"><?= $lang['th_date'] ?></th>
 
-
-
-                            <th style="width: 80px; text-align:right; padding-right:12px;"><?= $lang['th_actions'] ?>
-
-                            </th>
+                            <th style="width: 80px; text-align:right; padding-right:12px;"><?= $lang['th_actions'] ?></th>
 
                         </tr>
 
@@ -1314,34 +1358,24 @@ if (!empty($parentIds)) {
 
                         <?php if (empty($comments)): ?>
 
-                            <tr>
-
-                                <td colspan="7" style="text-align: center; padding: 60px; color: rgba(255,255,255,0.4);">
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-
-                                        stroke-width="1.5" stroke="currentColor"
-
-                                        style="width:48px;height:48px;display:block;margin:0 auto 16px;opacity:0.5;">
-
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-
-                                            d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-
-                                    </svg>
-
-                                    <?= $lang['no_comments_found'] ?>
-
+                            <tr class="empty-state-row">
+                                <td colspan="7" class="empty-state-cell">
+                                    <div class="empty-state-wrapper">
+                                        <div class="empty-state-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="empty-state-title"><?= $lang['no_comments_found'] ?></h3>
+                                        <p class="empty-state-subtitle"><?= $lang['no_comments_subtitle'] ?? 'Comments will appear here when readers engage with your posts.' ?></p>
+                                    </div>
                                 </td>
-
                             </tr>
 
                         <?php else: ?>
 
                             <?php
-
                             foreach ($comments as $comment):
-
                                 $name = $comment['name'] ?? 'Anonymous';
                                 $initials = strtoupper(substr($name, 0, 1));
                                 ?>

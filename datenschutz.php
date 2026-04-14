@@ -12,6 +12,7 @@ $socialFacebook = 'https://www.facebook.com/ENTRIKS/';
 $socialInstagram = 'https://www.instagram.com/entriks_/';
 $siteFaviconUrl = 'assets/img/favicon.png';
 $logoUrl = 'assets/img/logo.png';
+$footerLogoUrl = 'assets/img/logo.png';
 
 // Load from database settings if available
 if (isset($db)) {
@@ -27,6 +28,7 @@ if (isset($db)) {
             if (!empty($settings['social_instagram'])) $socialInstagram = $settings['social_instagram'];
             if (!empty($settings['favicon_url'])) $siteFaviconUrl = $settings['favicon_url'];
             if (!empty($settings['logo_url'])) $logoUrl = $settings['logo_url'];
+            if (!empty($settings['footer_logo_url'])) $footerLogoUrl = $settings['footer_logo_url'];
         }
     } catch (Exception $e) {
         // Use defaults on error

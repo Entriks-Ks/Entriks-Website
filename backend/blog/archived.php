@@ -839,7 +839,6 @@ $posts = iterator_to_array($cursor);
 		<main class="content">
 			<!-- Blur Background Theme -->
 			<div class="blur-bg-theme bottom-right"></div>
-			<div class="blur-bg-theme top-left"></div>
 
             <?php
 

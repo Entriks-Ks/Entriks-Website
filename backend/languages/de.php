@@ -198,7 +198,7 @@ return [
     'label_footer_en' => 'Footer-Text (Englisch)',
     'hint_footer_en' => 'In der Fußzeile der englischen Seite angezeigter Text',
     'label_footer_logo_url' => 'Footer-Logo-URL',
-    'hint_footer_logo_url' => 'Pfad zum Logo-Bild im Footer (z.B. assets/img/white-logo.png)',
+    'hint_footer_logo_url' => 'Pfad zum Logo-Bild im Footer (z.B. assets/img/logo.png)',
     'action_save_changes' => 'Änderungen speichern',
     // Blog Create/Edit
     'create_post_title' => 'Neuen Beitrag erstellen',

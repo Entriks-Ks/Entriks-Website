@@ -360,7 +360,7 @@ $existingContent = $post->content_de ?? '';
         <main class="content">
             <!-- Blur Background Theme -->
             <div class="blur-bg-theme bottom-right"></div>
-            <div class="blur-bg-theme top-left"></div>
+
             <?php
             $pageTitle = $lang['edit_post_title'];
             include __DIR__ . '/../partials/topbar.php';

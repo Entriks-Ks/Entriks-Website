@@ -13,7 +13,7 @@ $socialFacebook = 'https://www.facebook.com/ENTRIKS/';
 $socialInstagram = 'https://www.instagram.com/entriks_/';
 $siteFaviconUrl = 'assets/img/favicon.png';
 $logoUrl = 'assets/img/logo.png';
-$footerLogoUrl = 'assets/img/white-logo.png';
+$footerLogoUrl = 'assets/img/logo.png';
 $footerTextDe = 'ENTRIKS Talent Hub verbindet DACH-Unternehmen mit hochqualifizierten Fachkräften aus dem Kosovo – durch Nearshoring und Active Sourcing.';
 $footerTextEn = 'ENTRIKS Talent Hub connects DACH companies with highly qualified professionals from Kosovo through Nearshoring and Active Sourcing.';
 $copyrightYear = date('Y');
@@ -5345,5 +5345,104 @@ function getCmsContent($key, $default = '') {
     window.cookieConsentEnabled = true;
   </script>
   <script src="assets/js/cookie-consent.js?v=1" defer></script>
+
+  <!-- View Counter -->
+  <script>
+    (function() {
+      const cookieName = 'last_main_view_tracked';
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+      }
+      if (getCookie(cookieName)) return;
+
+      const fd = new FormData();
+      fd.append('title', 'Homepage - ENTRIKS Talent Hub');
+
+      fetch('backend/sync_data.php', {
+        method: 'POST',
+        body: fd,
+        credentials: 'same-origin'
+      }).then(r => r.json()).then(data => {
+        if (data.success) {
+          document.cookie = `${cookieName}=1; max-age=1800; path=/`;
+        }
+      }).catch(() => { });
+    })();
+  </script>
+
+  <?php if (isset($_SESSION['admin'])): ?>
+  <!-- Admin Notifications -->
+  <script>
+    (function() {
+      const lang = '<?php echo $lang; ?>';
+
+      if ("Notification" in window) {
+        if (Notification.permission !== "granted" && Notification.permission !== "denied") {
+          Notification.requestPermission();
+        }
+      }
+
+      let lastPollTime = <?php echo class_exists('MongoDB\BSON\UTCDateTime') ? (string) new MongoDB\BSON\UTCDateTime() : 'Date.now()'; ?>;
+      const basePrefix = 'backend/';
+
+      function showNotification(notification) {
+        let title = '';
+        let body = '';
+        let iconUrl = 'assets/img/favicon.png';
+
+        switch (notification.type) {
+          case 'blog_view':
+            title = (lang === 'de') ? 'Neuer Blog-Besuch' : 'New Blog View';
+            body = notification.item_title || (lang === 'de' ? 'Blog-Beitrag' : 'Blog Post');
+            break;
+          case 'main_view':
+            title = (lang === 'de') ? 'Neuer Website-Besuch' : 'New Website Visit';
+            body = notification.item_title || (lang === 'de' ? 'Homepage' : 'Homepage');
+            break;
+          case 'new_comment':
+            title = (lang === 'de') ? 'Neuer Kommentar' : 'New Comment';
+            body = notification.item_title || (lang === 'de' ? 'Blog-Beitrag' : 'Blog Post');
+            break;
+          case 'watched_comments':
+            title = (lang === 'de') ? 'Kommentare angesehen' : 'Comments Watched';
+            body = notification.item_title || (lang === 'de' ? 'Blog-Beitrag' : 'Blog Post');
+            break;
+          default:
+            title = (lang === 'de') ? 'Benachrichtigung' : 'Notification';
+            body = notification.item_title || (lang === 'de' ? 'Neue Aktivität' : 'New Activity');
+        }
+
+        if ("Notification" in window && Notification.permission === "granted") {
+          try {
+            new Notification(title, {
+              body: body,
+              icon: iconUrl,
+              tag: notification.id
+            });
+          } catch (e) { console.error('Notification error:', e); }
+        }
+      }
+
+      function pollNotifications() {
+        fetch(`${basePrefix}get_notifications.php?since=${lastPollTime}`)
+          .then(res => res.json())
+          .then(data => {
+            if (data.success && data.notifications.length > 0) {
+              data.notifications.forEach(n => {
+                showNotification(n);
+              });
+              lastPollTime = data.server_time;
+            }
+          })
+          .catch(err => console.error('Poll error:', err));
+      }
+
+      setInterval(pollNotifications, 5000);
+      setTimeout(pollNotifications, 1000);
+    })();
+  </script>
+  <?php endif; ?>
 </body>
 </html>

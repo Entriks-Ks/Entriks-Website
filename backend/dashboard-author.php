@@ -150,7 +150,6 @@ $adminDisplayName = $_SESSION['admin']['name'] ?? ucfirst(explode('@', $authorEm
         <main class="content">
             <!-- Blur Background Theme -->
             <div class="blur-bg-theme bottom-right"></div>
-            <div class="blur-bg-theme top-left"></div>
 
             <?php $showWelcomeMessage = true; include __DIR__ . '/partials/topbar.php'; ?>
 

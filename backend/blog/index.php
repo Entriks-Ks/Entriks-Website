@@ -160,7 +160,6 @@ $posts = $db->blog->aggregate($pipeline);
         <main class="content">
             <!-- Blur Background Theme -->
             <div class="blur-bg-theme bottom-right"></div>
-            <div class="blur-bg-theme top-left"></div>
 
             <?php
             // Fix relative path for search.js in topbar

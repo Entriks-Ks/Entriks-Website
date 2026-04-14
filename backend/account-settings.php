@@ -131,9 +131,9 @@ $dispName = $_SESSION['admin']['name'] ?? $currentSettings['display_name'] ?? 'A
 $metaDe = $currentSettings['meta_description_de'] ?? 'ENTRIKS - Ihr Partner für Nearshoring & BPO';
 $metaEn = $currentSettings['meta_description_en'] ?? 'ENTRIKS - Your partner for Nearshoring & BPO';
 $siteName = $currentSettings['site_name'] ?? 'ENTRIKS';
-$logoUrl = $currentSettings['logo_url'] ?? 'assets/img/logo.png';
-$faviconUrl = $currentSettings['favicon_url'] ?? 'assets/img/favicon.png';
-$footerLogoUrl = $currentSettings['footer_logo_url'] ?? 'assets/img/white-logo.png';
+$logoUrl = !empty($currentSettings['logo_url']) ? $currentSettings['logo_url'] : 'assets/img/logo.png';
+$faviconUrl = !empty($currentSettings['favicon_url']) ? $currentSettings['favicon_url'] : 'assets/img/favicon.png';
+$footerLogoUrl = !empty($currentSettings['footer_logo_url']) ? $currentSettings['footer_logo_url'] : 'assets/img/logo.png';
 $footerTextDe = !empty($currentSettings['footer_text_de']) ? $currentSettings['footer_text_de'] : 'ENTRIKS Talent Hub verbindet DACH-Unternehmen mit hochqualifizierten Fachkräften aus dem Kosovo – durch Nearshoring und Active Sourcing.';
 $footerTextEn = !empty($currentSettings['footer_text_en']) ? $currentSettings['footer_text_en'] : 'ENTRIKS Talent Hub connects DACH companies with highly qualified professionals from Kosovo through Nearshoring and Active Sourcing.';
 $contactEmail = $currentSettings['contact_email'] ?? '';
@@ -966,8 +966,7 @@ $infoIconNode = '
         <main class="content">
             <!-- Blur Background Theme -->
             <div class="blur-bg-theme bottom-right"></div>
-            <div class="blur-bg-theme top-left"></div>
-
+            
             <?php
             $pageTitle = $lang['settings_title'];
             include __DIR__ . '/partials/topbar.php';

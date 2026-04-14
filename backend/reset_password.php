@@ -175,9 +175,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
     <div class="login-wrapper">
-
-        <div class="blur-bg-theme top-left"></div>
-
         <div class="blur-bg-theme bottom-right"></div>
 
 

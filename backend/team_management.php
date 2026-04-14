@@ -571,7 +571,6 @@ $team = $db->admins->find([], ['sort' => ['created_at' => -1]])->toArray();
         <main class="content">
             <!-- Blur Background Theme -->
             <div class="blur-bg-theme bottom-right"></div>
-            <div class="blur-bg-theme top-left"></div>
 
             <?php
             $pageTitle = $lang['team_title'];
