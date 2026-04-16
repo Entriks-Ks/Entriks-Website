@@ -1,0 +1,23 @@
+
+:root {
+    
+    --pp-body: #fff;
+    --pp-black: #000;
+    --pp-white: #fff;
+    --pp-theme: #7B1FE4;
+    --pp-header: #1A192E;
+    --pp-text: #6D6B7B;
+    --pp-border: #CCCBD13D;
+    --pp-bg: #FAFAFA;
+    --pp-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.13);
+}
+
+// Theme Color - Defualt Colors
+$pp-black: var(--pp-black);
+$pp-white: var(--pp-white);
+$pp-theme-color: var(--pp-theme);
+$pp-text-color: var(--pp-text);
+$pp-header-color: var(--pp-header);
+$pp-border-color: var(--pp-border);
+$pp-bg-color: var(--pp-bg);
+$pp-shadow: var(--pp-box-shadow);

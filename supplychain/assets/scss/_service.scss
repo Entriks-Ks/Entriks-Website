@@ -1,0 +1,320 @@
+.pp-service-details-wrapper {
+
+    .pp-service-details-image {
+        margin-bottom: 50px;
+
+        img {
+            @include imgw;
+            border-radius: 16px;
+        }
+    }
+
+    .pp-main-sidebar {
+
+        .pp-single-sidebar-widget {
+            padding: 40px 30px;
+            background-color: $pp-bg-color;
+            margin-bottom: 30px;
+            border-radius: 10px;
+    
+            .wid-title {
+                margin-bottom: 25px;
+    
+                h3 {
+                    position: relative;
+                    padding-bottom: 15px;
+                    display: inline-block;
+    
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 20px;
+                        height: 2px;
+                        content: "";
+                        background-color: $pp-theme-color;
+                    }
+    
+                    &::before {
+                        position: absolute;
+                        bottom: 0;
+                        left: 30px;
+                        width: 63px;
+                        height: 2px;
+                        content: "";
+                        background-color: $pp-theme-color;
+                    }
+                }
+            }
+    
+            .pp-service-widget-categories {
+                ul {
+                    li {
+                        
+                        @include flex;
+                        justify-content: space-between;
+                        padding: 22px 25px;
+                        background-color: $pp-white;
+                        font-weight: 500;
+                        @include transition;
+                        border-radius: 6px;
+                        font-size: 16px;
+                        line-height: 1;
+    
+                        a {
+                            color: $pp-header-color;
+                        }
+    
+                        span {
+                            @include transition;
+                            color: $pp-header-color;
+                        }
+    
+                        &:not(:last-child){
+                            margin-bottom: 12px;
+                        }
+    
+                        &:hover {
+                            background-color: $pp-theme-color;
+    
+                            a {
+                                color: $pp-white;
+                            }
+    
+                            span {
+                                color: $pp-white;
+                            }
+                        }
+    
+    
+                        &.active {
+                            background-color: $pp-theme-color;
+    
+                            a {
+                                color: $pp-white;
+                            }
+    
+                            span {
+                                color: $pp-white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pp-service-details-content {
+
+        h3 {
+            font-size: 30px;
+            font-weight: 800;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .pp-thumb {
+            margin-bottom: 40px;
+
+            img {
+                @include imgw;
+                border-radius: 20px;
+            }
+        }
+
+        .pp-details-list-items {
+            margin-top: 30px;
+            @include flex;
+            gap: 100px;
+
+            @include breakpoint (max-xl){
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            .pp-details-list {
+
+                li {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: $pp-header-color;
+    
+                    &:not(:last-child){
+                        margin-bottom: 15px;
+                    }
+    
+                    i {
+                        color: $pp-theme-color;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .pp-faq-wrapper {
+
+        .faq-content {
+            .faq-list {
+                @include flex;
+                gap: 25px;
+                margin-top: 40px;
+                border-top: 1px solid #CCD8FF;
+                border-bottom: 1px solid #CCD8FF;
+                padding: 30px 0;
+
+                li {
+                    i {
+                        margin-right: 5px;
+                        color: $pp-theme-color;
+                    }
+                }
+            }
+        }
+
+    .accordion-item {
+        border: 0;
+        background-color: $pp-white;
+
+        .accordion-header { 
+            .accordion-button { 
+                font-weight: 600;
+                color: $pp-theme-color;
+                letter-spacing: -.2px;
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+                background-color: $pp-white;
+                padding: 25px 30px 0;
+                text-transform: capitalize;
+                font-size: 22px;
+                border: 1px solid $pp-border-color;
+                border: 1px solid transparent;
+                box-shadow: 12px -12px 24px 0px rgba(0, 0, 0, 0.06);
+
+                @include breakpoint (max-sm){
+                    font-size: 18px;
+                }
+
+                &::after {
+                    content: "\f324";
+                    font-family: "Font Awesome 6 Pro";
+                    background: transparent;
+                    font-weight: 500;
+                    transition: all 0.3s ease-in-out !important;
+                    color: $pp-theme-color;
+                }
+
+                &:not(.collapsed)::after {
+                    content: "\f322";
+                    font-family: "Font Awesome 6 Pro";
+                    background: transparent;
+                    font-weight: 500;
+                    color: $pp-theme-color;
+                    transform: rotate(0);
+                }
+
+                &.collapsed {
+                    background-color: $pp-white;
+                    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
+                    padding: 25px 30px;
+                    color: $pp-header-color;
+                }
+            }
+        }
+
+        .accordion-collapse { 
+
+            .accordion-body {
+                padding-right: 20px;
+                padding-left: 30px;
+                padding-top: 15px;
+                color: $pp-text-color;
+                background: $pp-white;
+                box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
+
+                @include breakpoint (max-xxl){
+                    padding-right: 50px;
+                }
+
+                @include breakpoint (max-lg){
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+    }
+}
+
+.pp-hosting-box-items {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid $pp-border-color;
+    border-radius: 16px;
+    background-color: $pp-bg-color;
+    position: relative;
+    z-index: 9;
+
+    &::before {
+        @include before;
+        background-color: $pp-theme-color;
+        transform: scale(1, 0);
+        transition: transform 500ms ease;
+        transform-origin: bottom center;
+        z-index: -1;
+        border-radius: 16px;
+    }
+
+    .icon {
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        border: 1px solid $pp-border-color;
+        border-radius: 8px;
+        @include transition;
+        transition: transform 500ms ease;
+        font-size: 30px;
+        color: $pp-theme-color;
+    }
+
+    .content {
+        margin-top: 20px;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+    }
+
+    &:hover {
+        border: 1px solid $pp-theme-color;
+
+        &::before {
+            transform: scale(1, 1);
+            transform-origin: top center;
+        }
+
+        .icon {
+            border: 1px solid transparent;
+            background-color: #F3F7FB;
+            transform: scaleX(-1);
+        }
+    
+        .content {
+           
+            h3 {
+                a {
+                    color: $pp-white;
+                }
+            }
+
+            p {
+                color: $pp-white;
+            }
+    
+            .theme-btn {
+                background-color: $pp-white;
+            }
+        }
+    }
+}

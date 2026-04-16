@@ -1,0 +1,254 @@
+.pp-team-card-item {
+    text-align: center;
+    position: relative;
+    z-index: 9;
+
+    &::before {
+        @include before;
+        height: 310px;
+        background: #F8F8FF;
+        top: initial;
+        z-index: -1;
+        border-radius: 20px;
+
+        @include breakpoint (max-xl) {
+            width: 100%;
+            top: initial;
+        }
+    }
+
+    .pp-team-image {
+        overflow: hidden;
+        border-radius: 100%;
+        max-width: 300px;
+        text-align: center;
+        margin: 0 auto;
+
+        img {
+            @include imgw;
+            border-radius: 100%;
+            transform: scale(1.02);
+            transition: all 1.5s ease-out;
+        }
+    }
+
+    .pp-team-content {
+        padding: 30px 0;
+        
+        h3 {
+            a {
+                &:hover {
+                    color: $pp-theme-color;
+                }
+            }
+        }
+
+        .social-icon  {
+            gap: 10px;
+            margin-top: 30px;
+            justify-content: center;
+
+            a {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 100%;
+                background-color: $pp-white;
+                color: $pp-theme-color;
+
+                &:hover {
+                    background-color: $pp-theme-color;
+                    color: $pp-white;
+                }
+            }
+        }
+    }
+
+    &:hover {
+
+        .pp-team-image {
+            img {
+                 -webkit-transform: scale3d(1.1, 1.1, 1);
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+    }
+}
+
+.pp-team-details-wrapper {
+    border: 1px solid #EAF3F8;
+    padding: 30px;
+
+    .pp-team-details-info {
+        @include flex;
+        gap: 30px;
+
+         @include breakpoint (max-xl) {
+            flex-wrap: wrap;
+        }
+
+        .pp-team-details-image {
+            
+            @include breakpoint (max-xl) {
+                flex-basis: 100%;
+
+                 img {
+                    @include imgw;
+                }
+            }
+        }
+
+        .pp-team-details-content {
+
+            .pp-team-client-info {
+                @include flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #ECF8FF;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+
+                @include breakpoint (max-xl) {
+                    flex-wrap: wrap;
+                }
+
+                .pp-info-cintent {
+                    h5 {
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .social-icon  {
+                    gap: 10px;
+                    margin-top: 30px;
+                    justify-content: center;
+
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        text-align: center;
+                        border-radius: 100%;
+                        background: #ECF8FF;
+                        color: $pp-theme-color;
+
+                        &:hover {
+                            background-color: $pp-theme-color;
+                            color: $pp-white;
+                        }
+                    }
+                }
+            }
+
+            .pp-sign-image {
+                margin-top: 70px;
+
+                @include breakpoint (max-xl) {
+                    margin-top: 30px;
+                }
+            }
+
+            .pp-team-contact-item {
+                @include flex;
+                gap: 40px;
+                border-top: 1px solid #EAF3F8;
+                padding-top: 30px;
+                margin-top: 30px;
+
+                @include breakpoint (max-xl) {
+                    flex-wrap: wrap;
+                    gap: 30px;
+                }
+
+                li {
+                    i {
+                        width: 36px;
+                        height: 36px;
+                        line-height: 36px;
+                        text-align: center;
+                        border-radius: 100px;
+                        background: #ECF8FF;
+                        color: $pp-theme-color;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pp-team-information-item {
+    p {
+        margin-bottom: 40px;
+    }
+
+    .pp-team-skill-box {
+        border: 1px solid #E5E5E5;
+        background: rgba(255, 255, 255, 0.50);
+        padding: 28px 40px;
+        
+        @include breakpoint (max-xl) {
+            padding: 30px;
+        }
+
+        .progress-wrap {
+            .pro-items {
+                width: 100%;
+    
+                &:not(:last-child){
+                    margin-bottom: 25px;
+                }
+                .pro-head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    
+                    .point {
+                        font-size: 16px;
+                        color: $pp-header-color;
+                    }
+                }
+
+                .progress {
+                    border-radius: 6px;
+                    background: rgba(123, 31, 228, 0.6);
+                    justify-content: flex-start;
+                    border-radius: 6px;
+                    align-items: center;
+                    position: relative;
+                    display: flex;
+                    height: 10px;
+                    width: 100%;
+                }
+                
+                .progress-value {
+                    animation: load 3s normal forwards;
+                    border-radius: 0;
+                    background: $pp-theme-color;
+                    height: 10px;
+                    width: 0;
+                }
+                .style-two{
+                    animation: load2 3s normal forwards;
+                }
+                .style-three{
+                    animation: load3 3s normal forwards;
+                }
+                @keyframes load {
+                    0% { width: 0; }
+                    100% { width: 90%; }
+                }
+                @keyframes load2 {
+                    0% { width: 0; }
+                    100% { width: 70%; }
+                }
+                @keyframes load3 {
+                    0% { width: 0; }
+                    100% { width: 55%; }
+                }
+            }
+        }
+    }
+}

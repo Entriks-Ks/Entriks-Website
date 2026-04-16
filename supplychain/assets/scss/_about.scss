@@ -1,0 +1,132 @@
+.pp-about-wrapper {
+
+    .about-image {
+        position: relative;
+        max-width: 556px;
+        z-index: 9;
+
+        img {
+            @include imgw;
+            border-radius: 12px;
+        }
+
+        .about-image-2 {
+            position: absolute;
+            bottom: -35px;
+            right: -55px;
+            max-width: 280px;
+
+            @include breakpoint (max-xl) {
+                right: 0;
+                bottom: 0;
+                max-width: 200px;
+            }
+        }
+
+        .about-shape {
+            position: absolute;
+            max-width: initial;
+            left: 115px;
+            bottom: -61%;
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+        }
+
+        .circle-shape {
+            position: absolute;
+            max-width: initial;
+            right: -64px;
+            bottom: -27%;
+            z-index: -1;
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+        }
+    }
+
+    .about-content {
+        .pp-text {
+            max-width: 632px;
+            margin-top: 15px;
+        }
+
+        .about-count-item {
+            @include flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            border-bottom: 1px solid rgba(204, 203, 209, 0.24);
+            padding-bottom: 30px;
+            margin-bottom: 48px;
+
+             @include breakpoint (max-xl) {
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            .count-text {
+                h2 {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+.pp-about-wrapper-2 {
+
+    .pp-about-content {
+        .pp-text {
+            max-width: 642px;
+            margin-top: 24px;
+        }
+
+        .pp-about-item {
+            margin-top: 32px;
+            margin-bottom: 48px;
+
+            .pp-about-text {
+                margin-bottom: 25px;
+
+                h6 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 6px;
+
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .pp-about-image {
+        position: relative;
+        z-index: 9;
+
+        img {
+            @include imgw;
+        }
+
+
+        .pp-blur-shape {
+            position: absolute;
+            right: -35%;
+            top: -20%;
+            z-index: -1;
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+
+            img {
+               width: initial;
+               height: initial;
+            }
+        }
+    }
+}

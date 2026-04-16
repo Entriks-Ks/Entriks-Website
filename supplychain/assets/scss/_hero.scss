@@ -1,0 +1,406 @@
+
+.pp-hero-1 {
+    margin: 0 40px;
+    border-radius: 48px;
+    position: relative;
+    padding: 150px 0 0;
+    z-index: 999;
+    margin-top: 40px;
+
+     @include breakpoint (max-xl) {
+        padding: 150px 0 100px;
+        margin-top: 0;
+     }
+
+     @include breakpoint (max-lg) {
+        padding: 140px 0 80px;
+     }
+
+     @include breakpoint (max-sm) {
+        margin: 0 15px;
+     }
+
+     &::before {
+        @include before;
+         background: (linear-gradient(270deg, #A121CA 0%, #7B1FE4 100%));
+         z-index: -1;
+         top: -15%;
+         border-radius: 48px;
+
+         @include breakpoint (max-xl) {
+            top: initial;
+         }
+     }
+
+     .top-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        img {
+            @include imgw;
+        }
+    }
+
+     .pp-hero-content {
+        text-align: center;
+        margin-bottom: 48px;
+
+        h1 {
+            color: $pp-white;
+            margin-bottom: 20px;
+        }
+
+         p {
+            color: rgba(255, 255, 255, 0.88);
+            max-width: 1025px;
+        }
+
+        .pp-hero-button {
+            @include flex;
+            gap: 24px;
+            margin-top: 48px;
+            justify-content: center;
+
+            @include breakpoint (max-xl) {
+                flex-wrap: wrap;
+                margin-top: 30px;
+            }
+
+            .pp-theme-btn {
+                background: transparent;
+                border: 1px solid $pp-white;
+
+                &::after {
+                     background: $pp-white;
+                }
+
+                &:hover {
+                    border: 1px solid transparent;
+                    color: $pp-header-color;
+                }
+            }
+        }
+     }
+
+     .pp-hero-image {
+        img {
+            @include imgw;
+            border-radius: 24px;
+            border: 1px solid $pp-border-color;
+        }
+     }
+}
+
+.pp-hero-2 {
+    padding: 220px 0 272px;
+    position: relative;
+
+    @include breakpoint (max-xl) {
+        padding: 150px 0 100px;
+    }
+
+    @include breakpoint (max-lg) {
+         padding: 140px 0 80px;
+     }
+
+    .pp-hero-image-1 {
+        position: absolute;
+        left: 213px;
+        top: 190px;
+
+        @include breakpoint (max-xxxl) {
+           left: 50px;
+        }
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+
+        img  {
+            @include imgw;
+            border-radius: 5px;
+        }
+    }
+
+    .pp-hero-image-2 {
+        position: absolute;
+        left: 300px;
+        top: 53%;
+
+         @include breakpoint (max-xxxl) {
+            left: 120px;
+            top: 56%;
+        }
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+
+        img  {
+            @include imgw;
+            border-radius: 5px;
+        }
+    }
+
+    .pp-hero-image-3 {
+        position: absolute;
+        left: 42%;
+        bottom: 120px;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+
+        img  {
+            @include imgw;
+            border-radius: 5px;
+        }
+    }
+
+    .pp-hero-image-4 {
+        position: absolute;
+        right: 12%;
+        bottom: 127px;
+
+        @include breakpoint (max-xxxl) {
+           right: 8%;
+        }
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+
+        img  {
+            @include imgw;
+            border-radius: 5px;
+        }
+    }
+
+     .pp-hero-image-5 {
+        position: absolute;
+        top: 220px;
+        right: 156px;
+
+        @include breakpoint (max-xxxl) {
+            top: 168px;
+            right: 85px;
+            max-width: 200px;
+        }
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+
+        img  {
+            @include imgw;
+            border-radius: 22px;
+        }
+    }
+
+    .pp-hero-shape-1 {
+        position: absolute;
+        left: 240px;
+        top: 48%;
+
+         @include breakpoint (max-xxxl) {
+            left: 82px;
+            bottom: 50%;
+        }
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .pp-hero-shape-2 {
+        position: absolute;
+        left: 34%;
+        bottom: 85px;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+     .pp-hero-shape-3 {
+        position: absolute;
+        right: 32%;
+        bottom: 182px;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .pp-hero-content {
+        text-align: center;
+
+        h6 {
+            color: rgba(255, 255, 255, 0.7);
+            padding: 6px 17px 6px 18px;
+            background-color: $pp-header-color;
+            border-radius: 30px;
+            margin-bottom: 15px;
+            display: inline-block;
+
+            img {
+                margin-right: 5px;
+            }
+        }
+
+        h1 {
+            color: $pp-white;
+            margin-bottom: 24px;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.88);
+            max-width: 960px;
+        }
+
+        .pp-hero-button {
+            @include flex;
+            gap: 24px;
+            margin-top: 48px;
+            justify-content: center;
+
+            @include breakpoint (max-xl) {
+                flex-wrap: wrap;
+                margin-top: 30px;
+            }
+
+            .pp-theme-btn {
+                &.pp-style-2 {
+                    background: transparent;
+                    border: 1px solid $pp-white;
+
+                    &::after {
+                         background: (linear-gradient(270deg, #A121CA 0%, #7B1FE4 100%));
+                    }
+
+                    &:hover {
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-3 {
+    position: relative;
+    z-index: 7;
+    padding: 240px 0 215px;
+
+    @include breakpoint (max-xl){
+        padding: 150px 0 280px;
+    }
+
+    @include breakpoint (max-lg){
+        padding: 130px 0 260px;
+    }
+
+
+    .hero-social {
+        position: absolute;
+        z-index: 9;
+        top: 40%;
+        left: -55px;
+        align-items: center;
+        gap: 16px;
+        transform: rotate(-90deg) translateY(-50%);
+
+        @include breakpoint (max-xxl){
+           display: none;
+        }
+
+        span {
+            color: $pp-white;
+            font-weight: 500;
+            margin-right: 16px;
+        }
+
+        a {
+            color: $pp-white;
+            margin-right: 15px;
+
+            &:hover {
+                color: $pp-theme-color;
+            }
+        }
+    }
+   
+    .hero-content {
+        @include breakpoint (max-md){
+            text-align: left;
+        }
+
+        h1 {
+            color: $pp-white;
+        }
+
+        .hero-list-items {
+            margin-top: 30px;
+            @include flex;
+            gap: 40px;
+            flex-wrap: wrap;
+
+            @include breakpoint (max-xl){
+                gap: 20px;
+            }
+
+            .hero-list {
+                li {
+                    font-weight: 500;
+                    color: $pp-white;
+
+                    i {
+                        margin-right: 10px;
+                    }
+
+                    &:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .hero-author {
+            @include flex;
+            gap: 24px;
+            margin-top: 48px;
+
+             @include breakpoint (max-xl){
+                flex-wrap: wrap;
+            }
+
+            .pp-theme-btn {
+                 &.pp-style-2 {
+                    background: transparent;
+                    border: 1px solid $pp-white;
+
+                    &::after {
+                         background: (linear-gradient(270deg, #A121CA 0%, #7B1FE4 100%));
+                    }
+
+                    &:hover {
+                        border: 1px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-image {
+        animation: up-down 2s ease-in-out infinite alternate-reverse both;
+
+        img {
+            @include imgw;
+        }
+    }
+
+}

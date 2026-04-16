@@ -1,0 +1,2533 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Gramentheme">
+        <meta name="description" content="Cloudly - Sass And software Html Template">
+        <!-- ======== Page title ============ -->
+        <title>ENTRIKS Outsourcing Hub</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/E.png">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <script>
+          window.addEventListener('DOMContentLoaded', (event) => {
+            const yearSpan = document.getElementById("current-year");
+             if(yearSpan) {
+              yearSpan.innerHTML = new Date().getFullYear();
+            }
+          });
+        </script>
+        <style>
+            :root {
+                --entriks-font-family: 'Inter', sans-serif;
+            }
+            html,
+            body {
+                font-family: var(--entriks-font-family) !important;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: var(--entriks-font-family) !important;
+            }
+            h1 {
+                font-size: 50px !important;
+                font-weight: 700 !important;
+                line-height: 1.2 !important;
+            }
+            h2 {
+                font-size: 32px !important;
+                font-weight: 600 !important;
+                line-height: 1.3 !important;
+                margin-bottom: 24px;
+            }
+            h3 {
+                font-size: 22px !important;
+                font-weight: 500 !important;
+                line-height: 1.3 !important;
+            }
+            .pp-resource-card h4,
+            .pp-testimonial-card .pp-content h5 {
+                font-family: var(--entriks-font-family) !important;
+                font-size: 22px !important;
+                font-weight: 600 !important;
+                line-height: 1.3 !important;
+            }
+            .pp-resource-section .pp-resource-card h4 {
+                font-size: 19px !important;
+                line-height: 1.35 !important;
+            }
+            body,
+            p,
+            li,
+            a,
+            span,
+            label,
+            strong,
+            b,
+            em,
+            input,
+            textarea,
+            select,
+            button,
+            th,
+            td,
+            blockquote,
+            figcaption,
+            legend {
+                font-family: var(--entriks-font-family) !important;
+                font-size: 16px !important;
+                font-weight: 400 !important;
+                line-height: 1.6 !important;
+                color: #333333;
+            }
+            .pp-theme-btn {
+                font-family: var(--entriks-font-family) !important;
+            }
+            .pp-sub-title {
+                font-weight: 700 !important;
+            }
+            small,
+            .small,
+            footer,
+            footer p,
+            footer span,
+            .pp-client-info-item .pp-content span {
+                font-family: var(--entriks-font-family) !important;
+                font-size: 14px !important;
+                font-weight: 500 !important;
+                line-height: 1.5 !important;
+            }
+            .pp-footer-content p,
+            .pp-footer-content p strong {
+                color: #ffffff !important;
+            }
+            .pp-footer-bottom-wrapper #current-year,
+            .pp-footer-bottom-wrapper p,
+            .pp-footer-bottom-wrapper p b {
+                color: #ffffff !important;
+            }
+            .pp-footer-bottom-wrapper p b {
+                color: #bc8cff !important;
+            }
+            .pp-security-bar.pp-security-bar--inside,
+            .pp-security-bar.pp-security-bar--inside strong,
+            .pp-security-bar.pp-security-bar--inside i {
+                color: #ffffff !important;
+            }
+            .pp-security-bar {
+                background: #8a2be2 !important;
+                background-image: none !important;
+            }
+            .pp-security-bar,
+            .pp-security-bar strong {
+                color: #ffffff !important;
+            }
+            .entriks-features-section {
+                margin-bottom: 0;
+            }
+            .erp-trust-bar {
+                max-width: 860px;
+                margin: 14px auto 0;
+                padding: 14px 14px 10px;
+                border-radius: 16px;
+                border: 1px solid rgba(15, 23, 42, 0.08);
+                background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+            }
+            .erp-trust-label {
+                margin: 0 0 10px;
+                text-align: center;
+                color: #9ca3af;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                line-height: 1.4;
+            }
+            .erp-trust-logos {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                flex-wrap: nowrap;
+            }
+            .erp-logo-item {
+                min-width: 140px;
+                min-height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 12px;
+                border-radius: 10px;
+                background: transparent;
+                border: 0;
+                position: relative;
+            }
+            .erp-logo-item + .erp-logo-item::before {
+                display: none;
+            }
+            .erp-logo-item img,
+            .erp-logo-item svg {
+                height: 35px;
+                width: 170px;
+                max-width: 170px;
+                object-fit: contain;
+                filter: none;
+                opacity: 1;
+                display: block;
+                transition: transform 0.2s ease;
+            }
+            .erp-logo-item img.erp-logo-sap,
+            .erp-logo-item img.erp-logo-sage {
+                width: 190px;
+                max-width: 190px;
+            }
+            .erp-logo-item.erp-logo-microsoft svg,
+            .erp-logo-item img.erp-logo-oracle {
+                width: 160px;
+                max-width: 160px;
+            }
+            .erp-logo-item:hover img,
+            .erp-logo-item:hover svg {
+                transform: translateY(-1px);
+            }
+            .entriks-features-grid {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 14px;
+                margin-bottom: 0;
+            }
+            .entriks-features-grid > [class*="col-"] {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 0 !important;
+            }
+            .entriks-feature-card {
+                background: transparent;
+                border: 0;
+                border-radius: 0;
+                padding: 2px 6px;
+                box-shadow: none;
+                text-align: center;
+                transition: transform 0.25s ease;
+                height: 100%;
+                position: relative;
+                overflow: visible;
+                backdrop-filter: none;
+            }
+            .entriks-feature-card::before {
+                display: none;
+            }
+            .entriks-feature-card:hover {
+                transform: translateY(-2px);
+            }
+            .entriks-feature-icon {
+                width: auto;
+                height: auto;
+                margin: 0 auto 10px;
+                border-radius: 0;
+                background: transparent;
+                border: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ead8ff;
+                font-size: 28px;
+                line-height: 1;
+                transition: transform 0.25s ease, color 0.25s ease;
+                text-shadow: 0 0 10px rgba(222, 179, 255, 0.3);
+            }
+            .entriks-feature-card:hover .entriks-feature-icon {
+                color: #ffffff;
+                transform: scale(1.08);
+            }
+            .entriks-feature-card h5 {
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 4px;
+                color: #f5ebff;
+                line-height: 1.25;
+                transition: color 0.3s ease;
+                letter-spacing: 0.3px;
+            }
+            .entriks-feature-card:hover h5 {
+                color: #ffffff;
+            }
+            .entriks-feature-card p {
+                margin-bottom: 0;
+                font-size: 12px;
+                line-height: 1.35;
+                color: #dcc7f4;
+                font-weight: 500;
+            }
+            .entriks-feature-card .text-muted {
+                color: #dcc7f4 !important;
+            }
+            .social-proof-wrap {
+                margin-top: 14px;
+                padding: 22px 0 8px;
+            }
+            .social-proof-label {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px 16px;
+                border-radius: 999px;
+                background: rgba(138, 43, 226, 0.12);
+                color: #8a2be2;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.2;
+                letter-spacing: 0.2px;
+                margin-bottom: 14px;
+            }
+            .hero-booking-btn {
+                background: #ffffff !important;
+                color: var(--pp-header) !important;
+                border: none !important;
+                box-shadow: 0 8px 20px rgba(15, 25, 46, 0.16);
+            }
+            .hero-booking-btn i {
+                color: var(--pp-header) !important;
+            }
+            .hero-booking-btn::after {
+                background: var(--pp-header) !important;
+            }
+            .hero-booking-btn:hover {
+                color: var(--pp-white) !important;
+                border: none !important;
+            }
+            .hero-booking-btn:hover i {
+                color: var(--pp-white) !important;
+            }
+            .hero-booking-btn:focus-visible {
+                outline: 3px solid rgba(255, 255, 255, 0.7);
+                outline-offset: 2px;
+            }
+            #hero.pp-hero-section.pp-hero-1 {
+                position: relative;
+                background: radial-gradient(circle at 8% 4%, rgba(138, 43, 226, 0.24) 0%, rgba(138, 43, 226, 0) 40%), radial-gradient(circle at 94% 24%, rgba(6, 182, 212, 0.22) 0%, rgba(6, 182, 212, 0) 38%), linear-gradient(180deg, #2f1b53 0%, #2f1b53 66%, #3a2660 66%, #3a2660 100%);
+                padding-top: 170px;
+                padding-bottom: 24px;
+                overflow: hidden;
+            }
+            #hero .top-shape {
+                opacity: 0.2;
+                mix-blend-mode: screen;
+            }
+            .entriks-hero-shell {
+                position: relative;
+                z-index: 2;
+                max-width: 1520px !important;
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+            .entriks-hero-copy {
+                max-width: 700px;
+            }
+            .entriks-hero-kicker {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.12);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 5px 11px;
+                color: #f8f5ff;
+                font-size: 11px !important;
+                font-weight: 600;
+                letter-spacing: 0.06em;
+                line-height: 1.1;
+                text-transform: uppercase;
+                margin-bottom: 14px;
+            }
+            .entriks-hero-kicker::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #9bf6ff;
+                box-shadow: 0 0 0 4px rgba(155, 246, 255, 0.16);
+            }
+            #hero .pp-hero-content h1,
+            #hero .pp-hero-content p {
+                color: rgba(255, 255, 255, 0.88);
+            }
+            #hero .pp-hero-content p:last-of-type {
+                font-size: 15px;
+                font-weight: 600;
+                background: linear-gradient(90deg, transparent 0%, rgba(196, 76, 227, 0.1) 50%, transparent 100%);
+                border-top: 1px solid rgba(224, 192, 255, 0.15);
+                border-bottom: 1px solid rgba(224, 192, 255, 0.15);
+                padding: 16px 0;
+                margin-top: 20px;
+                margin-bottom: 24px;
+                color: #e0c0ff;
+                letter-spacing: 0.4px;
+                line-height: 1.6;
+                text-transform: uppercase;
+                font-size: 13px;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0;
+                text-align: center;
+            }
+            #hero .pp-hero-content p:last-of-type .hero-phrase {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                padding: 0 12px;
+            }
+            #hero .pp-hero-content p:last-of-type .hero-phrase:first-child {
+                padding-left: 0;
+            }
+            #hero .pp-hero-content p:last-of-type .hero-phrase:not(:last-child)::after {
+                content: "";
+                width: 1px;
+                height: 16px;
+                background: rgba(255, 255, 255, 0.8);
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            #hero .pp-hero-content p:last-of-type:hover {
+                background: linear-gradient(90deg, transparent 0%, rgba(196, 76, 227, 0.18) 50%, transparent 100%);
+                border-color: rgba(224, 192, 255, 0.35);
+                text-shadow: 0 0 10px rgba(224, 192, 255, 0.3);
+            }
+            #hero .pp-hero-content h1 {
+                font-size: clamp(34px, 3.4vw, 56px) !important;
+                line-height: 1.1 !important;
+                margin-bottom: 20px;
+            }
+            @media (min-width: 1400px) {
+                .entriks-hero-shell {
+                    padding-left: 28px;
+                    padding-right: 28px;
+                }
+                #hero .pp-hero-content h1 {
+                    font-size: clamp(34px, 3.1vw, 56px) !important;
+                }
+            }
+            .entriks-hero-button-group {
+                margin-top: 30px;
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+            .entriks-hero-button-group .pp-theme-btn {
+                border-radius: 12px;
+                padding: 17px 26px;
+                font-size: 15px !important;
+                font-weight: 600 !important;
+                flex: 1 1 260px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+            .entriks-hero-button-group .pp-theme-btn.pp-style-2 {
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.45);
+                color: #ffffff;
+            }
+            .entriks-hero-button-group .pp-theme-btn.pp-style-2 i {
+                color: #ffffff;
+            }
+            .entriks-hero-button-group .pp-theme-btn.pp-style-2:hover {
+                background: #ffffff;
+                color: #1b1533;
+                border-color: #ffffff;
+            }
+            .entriks-hero-button-group .pp-theme-btn.pp-style-2:hover i {
+                color: #1b1533;
+            }
+            .entriks-hero-visual {
+                position: relative;
+                padding: 14px;
+                border-radius: 24px;
+                background: linear-gradient(145deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 100%);
+                border: 1px solid rgba(255, 255, 255, 0.28);
+                box-shadow: 0 26px 55px rgba(9, 7, 23, 0.42);
+            }
+            .entriks-hero-image-wrap {
+                border-radius: 18px;
+                overflow: hidden;
+            }
+            .entriks-hero-image-wrap img {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+                object-position: center 50%;
+                display: block;
+            }
+            .entriks-hero-proof {
+                position: absolute;
+                min-width: 170px;
+                padding: 12px 14px;
+                border-radius: 12px;
+                background: rgba(255, 255, 255, 0.76);
+                box-shadow: 0 16px 26px rgba(15, 23, 42, 0.2);
+                color: #111827;
+            }
+            .entriks-hero-proof strong {
+                display: block;
+                font-size: 22px;
+                font-weight: 800;
+                line-height: 1.08;
+                color: #7b1fe4;
+                margin-bottom: 5px;
+                transform: translateY(2px);
+            }
+            .entriks-hero-proof span {
+                font-size: 13px;
+                font-weight: 700;
+                color: #374151;
+                line-height: 1.35;
+            }
+            .entriks-hero-proof.is-top {
+                top: -16px;
+                left: -12px;
+            }
+            .entriks-hero-proof.is-bottom {
+                right: -14px;
+                bottom: 22px;
+            }
+            .entriks-features-section {
+                margin-top: 100px;
+                position: relative;
+                z-index: 4;
+            }
+            .social-proof-title {
+                margin: 0 0 18px;
+                font-size: 20px;
+                font-weight: 700;
+                color: #0f172a;
+                line-height: 1.35;
+            }
+            .social-proof-logos {
+                gap: 22px;
+                align-items: center;
+                justify-content: center;
+            }
+            .social-proof-logo {
+                max-width: 10.6rem;
+                max-height: 2.85rem;
+                width: auto;
+                height: auto;
+                margin: 0;
+                filter: saturate(1.02);
+                transition: transform 0.25s ease, filter 0.25s ease;
+            }
+            .social-proof-item {
+                min-height: 82px;
+                min-width: 210px;
+                border-radius: 14px;
+                border: 1px solid rgba(15, 23, 42, 0.08);
+                background: #ffffff;
+                box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 16px 24px;
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+            .social-proof-item:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 16px 30px rgba(15, 23, 42, 0.10);
+            }
+            .social-proof-logo:hover {
+                transform: scale(1.02);
+                filter: saturate(1.08);
+            }
+            @media (max-width: 1199px) {
+                .entriks-features-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+            }
+            @media (max-width: 767px) {
+                .entriks-features-grid {
+                    grid-template-columns: 1fr;
+                }
+                .erp-trust-logos {
+                    justify-content: center;
+                    gap: 6px;
+                }
+                .erp-logo-item {
+                    min-width: calc(50% - 6px);
+                    min-height: 52px;
+                    padding: 10px 8px;
+                }
+                .erp-logo-item + .erp-logo-item::before {
+                    display: none;
+                }
+                .social-proof-logos {
+                    gap: 12px;
+                }
+                .social-proof-title {
+                    font-size: 18px;
+                    margin-bottom: 14px;
+                }
+                .social-proof-logo {
+                    max-width: 9.4rem;
+                    max-height: 2.5rem;
+                }
+                .social-proof-item {
+                    min-width: 170px;
+                    min-height: 72px;
+                    padding: 12px 16px;
+                }
+            }
+            .entriks-role-card {
+                padding: 36px 30px;
+                border-radius: 22px;
+                min-height: 100%;
+                background: #ffffff;
+                border: 1px solid rgba(138, 43, 226, 0.1);
+                box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+            }
+            .entriks-role-card:hover {
+                transform: translateY(-6px);
+                border-color: rgba(138, 43, 226, 0.26);
+                box-shadow: 0 24px 46px rgba(15, 23, 42, 0.12);
+            }
+            .entriks-role-card .pp-offer-icon {
+                width: 62px;
+                height: 62px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 16px;
+                background: #8a2be2;
+                border: 1px solid #8a2be2;
+                margin-bottom: 18px;
+            }
+            .entriks-role-card .pp-offer-icon i {
+                color: #ffffff;
+                font-size: 24px;
+                line-height: 1;
+            }
+            .entriks-role-card .role-tag {
+                display: inline-flex;
+                align-items: center;
+                padding: 3px 9px !important;
+                border-radius: 999px;
+                background: rgba(138, 43, 226, 0.12);
+                color: #7b1fe4;
+                font-size: 11px !important;
+                font-weight: 700;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                line-height: 1;
+                margin-bottom: 8px;
+            }
+            .entriks-role-card .pp-offer-content h4 {
+                color: #0f172a;
+                font-size: 20px;
+                line-height: 1.4;
+                font-weight: 700;
+                margin-bottom: 18px;
+            }
+            .entriks-role-card .role-translation {
+                color: #5b6475;
+                font-size: 15px;
+                line-height: 1.6;
+                margin: 0 0 16px;
+            }
+            .entriks-role-card .role-meta {
+                margin-top: auto;
+                color: #6b7280;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 1.35;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .entriks-role-card .role-meta i {
+                color: #16a34a;
+                font-size: 12px;
+                line-height: 1;
+            }
+            .entriks-solution-section {
+                background: linear-gradient(180deg, #ffffff 0%, #fbf9ff 100%);
+            }
+            .entriks-solution-section .pp-section-title {
+                margin-bottom: 8px;
+            }
+            .entriks-solution-section .solution-tag {
+                color: #8a2be2;
+            }
+            .entriks-solution-section .solution-title {
+                color: #111827;
+                font-size: 32px !important;
+                font-weight: 600 !important;
+                line-height: 1.3 !important;
+            }
+            .entriks-solution-section .solution-subheadline {
+                max-width: 900px;
+                margin: 16px auto 0;
+                color: #4b5563;
+                font-size: 18px !important;
+                line-height: 1.6 !important;
+                font-weight: 400 !important;
+                text-align: center;
+            }
+            @media (max-width: 767px) {
+                .entriks-role-card {
+                    padding: 32px 24px;
+                }
+                .entriks-role-card .pp-offer-content h4 {
+                    font-size: 18px;
+                }
+                .entriks-solution-section .solution-subheadline {
+                    font-size: 17px !important;
+                }
+            }
+            #process .pp-section-title {
+                margin-bottom: 14px;
+            }
+            #process .pp-how-work-items {
+                padding-top: 14px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 12px;
+            }
+            #process .process-step-icon {
+                width: 56px;
+                height: 56px;
+                border-radius: 14px;
+                background: rgba(138, 43, 226, 0.22);
+                border: 1px solid rgba(138, 43, 226, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                align-self: center;
+            }
+            #process .process-step-icon i {
+                color: #ffffff;
+                font-size: 24px;
+                line-height: 1;
+            }
+            #process .pp-how-work-items h6 {
+                color: #d033ff;
+                text-shadow: 0 0 12px rgba(188, 19, 254, 0.45);
+                margin: 0;
+            }
+            #process .pp-how-work-items h3 {
+                margin: 0;
+            }
+            #process .pp-how-work-items p {
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.9;
+                margin: 0;
+            }
+            .entriks-case-study {
+                background: #f8f9fa;
+            }
+            .entriks-case-study .row {
+                --bs-gutter-x: 4.5rem;
+            }
+            .case-study-kpi-panel {
+                background: #ffffff;
+                border-radius: 18px;
+                padding: 26px 22px;
+                height: 100%;
+                border: 1px solid rgba(15, 23, 42, 0.06);
+            }
+            .case-study-kpi-intro {
+                margin: 0 0 18px;
+                color: #475569;
+                font-size: 15px !important;
+                line-height: 1.6 !important;
+                text-align: center;
+            }
+            .case-study-kpi-photo {
+                width: 100%;
+                border-radius: 14px;
+                display: block;
+                margin: 0 0 18px;
+                box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+            }
+            .entriks-case-study .pp-key-feature-content {
+                padding-left: 8px;
+            }
+            .entriks-case-study .pp-section-title h2 {
+                font-size: clamp(1.7rem, 2.6vw, 2.55rem);
+                line-height: 1.2;
+            }
+            .case-study-text-block + .case-study-text-block {
+                margin-top: 24px;
+            }
+            .case-study-block-title {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 0 0 10px;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 1.35;
+                color: #0f172a;
+            }
+            .case-study-block-title i {
+                font-size: 17px;
+                line-height: 1;
+            }
+            .case-study-block-title.is-problem i {
+                color: #ef4444;
+            }
+            .case-study-block-title.is-solution i {
+                color: #16a34a;
+            }
+            .case-study-block-title.is-results i {
+                color: #2563eb;
+            }
+            .case-study-solution-list {
+                margin: 0;
+                padding: 0;
+            }
+            .case-study-solution-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                color: #4b5563;
+                margin-bottom: 12px;
+            }
+            .case-study-solution-list li i {
+                color: #059669;
+                font-size: 14px;
+                margin-top: 5px;
+                text-shadow: 0 0 8px rgba(5, 150, 105, 0.18);
+            }
+            .case-study-solution-list li span {
+                font-size: 15px !important;
+                line-height: 1.55 !important;
+                font-weight: 500;
+            }
+            .case-study-kpis {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 16px;
+                justify-content: center;
+                margin: 0;
+            }
+            .case-study-kpi {
+                background: #ffffff;
+                border: 1px solid rgba(138, 43, 226, 0.10);
+                border-radius: 22px;
+                padding: 17px 14px;
+                text-align: center;
+                box-shadow: 0 6px 24px rgba(138, 43, 226, 0.13), 0 2px 10px rgba(15, 23, 42, 0.07);
+                opacity: 0;
+                transform: translateY(10px);
+                transition: opacity 0.55s ease, transform 0.55s ease;
+            }
+            .case-study-kpi.is-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .case-study-kpis .case-study-kpi:nth-child(2) {
+                transition-delay: 0.12s;
+            }
+            .case-study-kpi-ring {
+                --progress: 30;
+                width: 110px;
+                height: 110px;
+                margin: 0 auto 11px;
+                border-radius: 50%;
+                background: conic-gradient(#8a2be2 calc(var(--progress) * 1%), #e6e7eb 0);
+                display: grid;
+                place-items: center;
+                position: relative;
+            }
+            .case-study-kpi-ring::before {
+                content: "";
+                position: absolute;
+                inset: 12px;
+                border-radius: 50%;
+                background: #ffffff;
+            }
+            .case-study-kpi-value {
+                position: relative;
+                z-index: 1;
+                line-height: 1;
+                letter-spacing: -0.03em;
+            }
+            .kpi-number {
+                font-size: 32px !important;
+                font-weight: 800 !important;
+                color: #8a2be2;
+                line-height: 1;
+            }
+            .case-study-kpi-label {
+                color: #374151;
+                font-size: 13px;
+                line-height: 1.5;
+                font-weight: 600;
+            }
+            .case-study-timeline {
+                margin: 18px 0 0;
+                padding: 12px 14px 6px;
+                border: 1px solid rgba(138, 43, 226, 0.12);
+                border-radius: 14px;
+                background: linear-gradient(180deg, #fff 0%, #fcfaff 100%);
+                max-width: 100%;
+            }
+            .case-study-timeline-track {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 10px;
+            }
+            .case-study-timeline-track::before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 10%;
+                right: 10%;
+                height: 1px;
+                background: rgba(138, 43, 226, 0.25);
+            }
+            .case-study-milestone {
+                position: relative;
+                text-align: center;
+                padding-top: 0;
+            }
+            .case-study-dot {
+                width: 8px;
+                height: 8px;
+                margin: 8px auto 10px;
+                border-radius: 50%;
+                background: #bc13fe;
+                box-shadow: 0 0 0 4px rgba(188, 19, 254, 0.1);
+                position: relative;
+                z-index: 1;
+            }
+            .case-study-day {
+                display: block;
+                color: #8a2be2;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin-bottom: 4px;
+            }
+            .case-study-milestone p {
+                color: #4b5563;
+                font-size: 12px !important;
+                line-height: 1.45 !important;
+                margin: 0;
+            }
+            .case-study-results-list {
+                margin: 0;
+                padding: 0;
+            }
+            .case-study-results-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                margin-bottom: 10px;
+                color: #1f2937;
+            }
+            .case-study-results-list li i {
+                color: #2563eb;
+                margin-top: 5px;
+            }
+            .testimonial-highlight-box {
+                background: #f8f2ff;
+                border: 1px solid rgba(138, 43, 226, 0.14);
+                border-radius: 14px;
+                padding: 18px;
+                min-height: 168px;
+                display: flex;
+                flex-direction: column;
+            }
+            .testimonial-highlight-box--gray {
+                background: #fafbfc;
+                border-color: rgba(15, 23, 42, 0.08);
+            }
+            .testimonial-highlight-box .pp-client-info-item {
+                margin-top: 8px;
+            }
+            .testimonial-quote {
+                font-size: 16px !important;
+                line-height: 1.5 !important;
+                margin-bottom: 12px;
+            }
+            .pain-points-box {
+                margin-top: 8px;
+                border: none;
+                background: rgba(231, 76, 60, 0.03);
+                border-radius: 12px;
+                padding: 30px;
+            }
+            .pain-points-title {
+                font-size: 23px;
+                font-weight: 700 !important;
+                color: #0f172a;
+            }
+            .pain-points-list {
+                margin: 0;
+                padding: 0;
+            }
+            .pain-points-list li {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 17px !important;
+                font-weight: 500 !important;
+                line-height: 1.55 !important;
+                color: #1f2937;
+                margin: 0;
+            }
+            .pain-points-list li + li {
+                margin-top: 14px;
+            }
+            .pain-points-list li i {
+                color: #e74c3c;
+                font-size: 17px;
+                line-height: 1.4;
+                margin-top: 0;
+                flex-shrink: 0;
+            }
+            .scm-bento-grid {
+                margin-top: 16px;
+                display: grid;
+                grid-template-columns: 1.45fr 1fr;
+                gap: 22px;
+                align-items: stretch;
+            }
+            .scm-bento-hero-card {
+                position: relative;
+                min-height: 0;
+                height: 100%;
+                border-radius: 24px;
+                overflow: hidden;
+                background-image: url('problem.jpg');
+                background-size: cover;
+                background-position: center;
+                box-shadow: 0 22px 42px rgba(15, 23, 42, 0.24);
+                display: flex;
+                align-items: flex-end;
+            }
+            .scm-bento-hero-card::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(165deg, rgba(52, 19, 104, 0.22) 0%, rgba(52, 19, 104, 0.64) 56%, rgba(17, 24, 39, 0.76) 100%);
+            }
+            .scm-bento-hero-content {
+                position: relative;
+                z-index: 1;
+                padding: 34px;
+                width: 100%;
+            }
+            .scm-bento-days {
+                display: inline-block;
+                font-size: 46px !important;
+                font-weight: 700 !important;
+                line-height: 1.1 !important;
+                color: #ffffff;
+                margin-bottom: 10px;
+            }
+            .scm-bento-quote {
+                font-size: 19px !important;
+                font-weight: 500 !important;
+                line-height: 1.5 !important;
+                color: rgba(255, 255, 255, 0.95);
+                max-width: 88%;
+                margin: 0;
+            }
+            .scm-bento-problems {
+                display: flex;
+                margin-top: 20px;
+            }
+            .scm-bento-problems .pain-points-box {
+                width: 100%;
+                height: 100%;
+                margin-top: 0;
+            }
+            .scm-bento-problem-card {
+                border-radius: 24px;
+                background: #1a1a2e;
+                box-shadow: 0 18px 36px rgba(15, 23, 42, 0.24);
+                padding: 28px 26px;
+                color: #f8fafc;
+            }
+            .scm-bento-problem-card h4 {
+                font-size: 22px !important;
+                font-weight: 600 !important;
+                line-height: 1.3 !important;
+                color: #ffffff;
+                margin-bottom: 14px;
+            }
+            .scm-bento-problem-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .scm-bento-problem-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                color: rgba(248, 250, 252, 0.94);
+                font-size: 16px !important;
+                font-weight: 500 !important;
+                line-height: 1.55 !important;
+            }
+            .scm-bento-problem-list li + li {
+                margin-top: 11px;
+            }
+            .scm-bento-problem-list li i {
+                color: #ff8a4c;
+                margin-top: 5px;
+                font-size: 15px;
+                flex-shrink: 0;
+            }
+            .testimonial-name {
+                margin-bottom: 2px;
+                font-size: 13px !important;
+                font-weight: 500 !important;
+                line-height: 1.35;
+            }
+            .pp-testimonial-card .pp-content .testimonial-name {
+                font-size: 16px !important;
+                font-weight: 500 !important;
+                line-height: 1.35 !important;
+            }
+            .testimonial-role {
+                font-size: 13px !important;
+                color: #666;
+                line-height: 1.4;
+            }
+            .pp-footer-content .social-icon a {
+                width: 46px;
+                height: 46px;
+            }
+            .pp-footer-content .social-icon a i {
+                font-size: 20px;
+            }
+            @media (max-width: 991px) {
+                #hero.pp-hero-section.pp-hero-1 {
+                    padding-top: 92px;
+                    padding-bottom: 90px;
+                }
+                .entriks-hero-copy {
+                    max-width: 100%;
+                    margin-bottom: 24px;
+                }
+                .entriks-hero-image-wrap img {
+                    height: 430px;
+                }
+                .entriks-hero-proof.is-top {
+                    top: 12px;
+                    left: 12px;
+                }
+                .entriks-hero-proof.is-bottom {
+                    right: 12px;
+                    bottom: 12px;
+                }
+                .entriks-features-section {
+                    margin-top: 74px;
+                }
+                h1 {
+                    font-size: 44px !important;
+                }
+                h2 {
+                    font-size: 28px !important;
+                }
+                .scm-bento-grid {
+                    grid-template-columns: 1fr;
+                }
+                .scm-bento-hero-card {
+                    min-height: 440px;
+                }
+                .scm-bento-quote {
+                    max-width: 100%;
+                }
+                .scm-bento-problems {
+                    display: block;
+                    margin-top: 0;
+                }
+                .entriks-case-study .row {
+                    --bs-gutter-x: 2.2rem;
+                }
+                .entriks-case-study .pp-key-feature-content {
+                    padding-left: 0;
+                }
+                .case-study-kpi-panel {
+                    margin-bottom: 10px;
+                }
+            }
+            @media (max-width: 767px) {
+                #hero.pp-hero-section.pp-hero-1 {
+                    padding-top: 78px;
+                    padding-bottom: 70px;
+                }
+                .entriks-hero-kicker {
+                    margin-bottom: 12px;
+                    font-size: 10px !important;
+                }
+                #hero .pp-hero-content h1 {
+                    font-size: clamp(31px, 9vw, 40px) !important;
+                    margin-bottom: 16px;
+                }
+                .entriks-hero-button-group .pp-theme-btn {
+                    width: 100%;
+                    justify-content: center;
+                }
+                .entriks-hero-image-wrap img {
+                    height: 340px;
+                }
+                .entriks-hero-proof {
+                    min-width: 142px;
+                    padding: 10px 11px;
+                }
+                .entriks-hero-proof strong {
+                    font-size: 18px;
+                }
+                .entriks-features-section {
+                    margin-top: 48px;
+                }
+                h1 {
+                    font-size: 32px !important;
+                }
+                h2 {
+                    font-size: 24px !important;
+                }
+                .entriks-features-section {
+                    margin-bottom: 0;
+                }
+                .entriks-features-grid {
+                    margin-bottom: 0;
+                }
+                .scm-bento-hero-card {
+                    min-height: 360px;
+                }
+                .scm-bento-hero-content {
+                    padding: 24px;
+                }
+                .scm-bento-days {
+                    font-size: 36px !important;
+                }
+                .scm-bento-quote {
+                    font-size: 17px !important;
+                }
+                .scm-bento-problem-card {
+                    padding: 22px 20px;
+                }
+                .case-study-kpis,
+                .case-study-timeline-track {
+                    grid-template-columns: 1fr;
+                }
+                .case-study-kpis {
+                    justify-content: center;
+                }
+                .case-study-timeline-track::before {
+                    display: none;
+                }
+                .case-study-milestone {
+                    padding-bottom: 10px;
+                }
+            }
+
+             /* Heqim padding-un e poshtëm të seksionit që fotoja të preket me fundin */
+.pp-cta-section {
+    padding-bottom: 0 !important;
+    padding-top: 80px !important;
+    overflow: hidden;
+}
+
+.cta-girl-col {
+    max-width: 500px;
+    margin-left: -300px;
+    display: flex;
+    align-items: flex-end; /* Siguron rreshtimin në fund */
+    justify-content: flex-start;
+    height: 85%;
+}
+
+.cta-girl-col .cta-girl-img {
+    height: 480px; /* Rregullo lartësinë sipas dëshirës */
+    width: auto;
+    display: block;
+    vertical-align: bottom; /* Heq hapësirën e vogël 3px që lënë browser-at poshtë imazheve */
+    margin-bottom: 0;
+    filter: none !important;
+}
+
+.pp-cta-content {
+    margin-top: 35px;
+}
+
+.pp-contact-form .form-control::placeholder {
+    font-size: 14px;
+    color: #8a8a8a;
+    opacity: 1;
+}
+
+.pp-contact-form .form-select:invalid {
+    font-size: 10px;
+    color: #8a8a8a;
+}
+
+/* Rregullimi për celularë */
+@media (max-width: 991px) {
+    .pp-cta-section {
+        padding-bottom: 60px !important; /* Rikthen padding-un në celular ku s'ka foto */
+    }
+    .pp-cta-content {
+        text-align: center;
+    }
+}
+
+.benefits-simple-section {
+    background: #f8f5ff;
+    border-top: 1px solid #e7dcff;
+    border-bottom: 1px solid #e7dcff;
+}
+
+.benefits-simple-head {
+    max-width: 860px;
+    margin: 0 auto 28px;
+}
+
+.benefits-simple-kicker {
+    margin: 0 0 12px;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7b4bc9;
+}
+
+.benefits-simple-head h2 {
+    margin: 0;
+    font-size: clamp(26px, 2.2vw, 34px) !important;
+    line-height: 1.25 !important;
+    color: #2f1f52;
+}
+
+.benefits-simple-card {
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #e6d9ff;
+    border-radius: 12px;
+    padding: 18px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.benefits-simple-card .benefits-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #f3ebff;
+    border: 1px solid #e2d3ff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b35c9;
+    font-size: 16px;
+    flex: 0 0 auto;
+}
+
+.benefits-simple-card h5 {
+    margin: 0;
+    color: #2f1f52;
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+}
+
+.benefits-simple-note {
+    margin: 20px auto 0;
+    max-width: 860px;
+    background: #8a2be2;
+    border: 1px solid #7a33e1;
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: #ffffff;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+.benefits-simple-note i {
+    color: #ffffff;
+    margin-right: 6px;
+}
+
+.benefits-simple-note strong {
+    color: #ffffff !important;
+}
+
+@media (max-width: 767px) {
+    .benefits-simple-head {
+        margin-bottom: 20px;
+    }
+
+    .benefits-simple-card {
+        padding: 14px;
+    }
+
+    .benefits-simple-card h5 {
+        font-size: 16px !important;
+    }
+}
+        </style>
+        <script>
+         function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+          o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+          o.onload=function(){window.trackingFunctions.onLoad({appId:"697bd59c30c37300193b6420"})},
+          document.head.appendChild(o)}initApollo();
+        </script>
+    </head>
+    <body>
+
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                   <span data-text-preloader="E" class="letters-loading">E</span>
+                   <span data-text-preloader="N" class="letters-loading">N</span>
+                   <span data-text-preloader="T" class="letters-loading">T</span>
+                   <span data-text-preloader="R" class="letters-loading">R</span>
+                   <span data-text-preloader="I" class="letters-loading">I</span>
+                   <span data-text-preloader="K" class="letters-loading">K</span>
+                   <span data-text-preloader="S" class="letters-loading">S</span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- pp Back To Top Start -->
+        <button id="pp-back-top" class="pp-back-to-top show">
+           <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+        <!-- pp MouseCursor Start -->
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner"></div>
+
+        <!-- Offcanvas Area Start -->
+         <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index.html">
+                                 <img src="assets/img/logo/entriks_logo_bigger.webp" alt="logo-img" style="width: 200px; height: auto;">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                          Ihr Partner für effizientes SCM-Outsourcing. Wir unterstützen Unternehmen dabei, ihre Supply Chain Rollen innerhalb von 10–14 Tagen mit hochqualifizierten Experten zu besetzen.</p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Kontaktinformationen</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">Lot Vaku L2.1, 10000 Pristina, Kosovo</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:info@example.com"><span class="mailto:info@example.com">kontakt@entriks.com</span></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">Mo.–Fr., 09:00 – 17:00 Uhr</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+38343889344">+383 43 889 344</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                
+                            </div>
+                           <div class="social-icon d-flex align-items-center justify-content-center mt-30">
+                             <a href="https://www.facebook.com/ENTRIKS/" target="_blank" class="centered-icon"><i class="fab fa-facebook-f"></i></a>
+                             <a href="https://www.instagram.com/entriks_/" target="_blank" class="centered-icon"><i class="fab fa-instagram"></i></a>
+                             <a href="https://www.linkedin.com/company/entriks" target="_blank" class="centered-icon"><i class="fab fa-linkedin-in"></i></a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+       <header id="header-sticky" class="header-1">
+    <div class="container-fluid">
+        <div class="mega-menu-wrapper">
+            <div class="header-main style-1">
+                <div class="logo">
+                    <a href="index.html" class="header-logo">
+                        <img src="assets/img/logo/entriks_logo_bigger.webp" alt="logo-img">
+                    </a>
+                    <a href="index.html" class="header-logo-2">
+                        <img src="assets/img/logo/entriks_logo_bigger.webp" alt="logo-img">
+                    </a>
+                </div>
+                <div class="mean__menu-wrapper">
+                   <div class="main-menu">
+    <nav id="mobile-menu">
+        <ul>
+            <li class="active">
+                <a href="#hero">Startseite</a>
+            </li>
+            <li>
+                <a href="#solution">Leistungen</a>
+            </li>
+            <li>
+                <a href="#process">Ablauf</a>
+            </li>
+            <li>
+                <a href="#case-study">Case Study</a>
+            </li>
+            <li>
+                <a href="#downloads">Ressourcen</a>
+            </li>
+            <li>
+                <a href="#contact-form">Kontakt</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+                </div>
+                <div class="header-right d-flex justify-content-end align-items-center">
+                    <a href="#why-entriks" class="pp-theme-btn">
+                        Warum ENTRIKS? <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                    <div class="header__hamburger d-xl-none my-auto">
+                        <div class="sidebar__toggle">
+                            <div class="header-bar style-1">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+       <section id="hero" class="pp-hero-section pp-hero-1 fix">
+    <div class="top-shape">
+        <img src="assets/img/home-1/hero/hero-bg.png" alt="img">
+    </div>
+    <div class="container entriks-hero-shell">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+                <div class="pp-hero-content entriks-hero-copy">
+                    <span class="entriks-hero-kicker wow fadeInUp" data-wow-delay=".2s">SCM OUTSOURCING HUB</span>
+                    <h1 class="wow img-custom-anim-left" data-wow-duration="1.3s" data-wow-delay="0.3s">
+                       Deutschsprachige Supply‑Chain‑Experten <br> – in nur 10–14 Tagen einsatzbereit
+                    </h1>
+                    <p class="wow fadeInUp" data-wow-delay=".45s">
+                       Sofort verfügbare Spezialisten für Disposition, Einkauf, Forecasting und Order Management
+                    </p>
+                    <p class="wow fadeInUp" data-wow-delay=".55s">
+                              <span class="hero-phrase">ERP–fit</span>
+                              <span class="hero-phrase">Kosteneffizient</span>
+                              <span class="hero-phrase">Voll integriert in Ihre Prozesse</span>
+                    </p>
+                    <div class="pp-hero-button entriks-hero-button-group">
+                        <a href="#call-to-action" class="pp-theme-btn hero-booking-btn wow fadeInUp" data-wow-delay=".65s">Erstgespräch buchen<i class="fa-solid fa-arrow-right-long"></i></a>
+                        <a href="assets/downloads/Checkliste SCM (1).pdf" download class="pp-theme-btn pp-style-2 wow fadeInUp" data-wow-delay=".75s">Checkliste herunterladen <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="entriks-hero-visual wow img-custom-anim-bottom" data-wow-duration="1.3s" data-wow-delay="0.35s">
+                    <div class="entriks-hero-image-wrap">
+                        <img src="assets/img/home-1/hero/image4.png" alt="ENTRIKS Hub">
+                    </div>
+                    <div class="entriks-hero-proof is-top wow fadeInUp" data-wow-delay=".8s">
+                        <strong>10–14</strong>
+                        <span>Tage bis Projektstart</span>
+                    </div>
+                    <div class="entriks-hero-proof is-bottom wow fadeInUp" data-wow-delay=".95s">
+                        <strong>150+</strong>
+                        <span>Mittelständler vertrauen ENTRIKS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <div class="pp-brand-section entriks-features-section pt-3 pb-0 fix">
+        <div class="container custom-container-3"> 
+            <div class="row entriks-features-grid justify-content-center text-center">
+                    <div class="col-6 col-lg-3 mb-0 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="benefit-card entriks-feature-card">
+                            <i class="fa-solid fa-bolt-lightning entriks-feature-icon"></i>
+                            <h5 class="fw-bold">Schnell startklar</h5>
+                            <p class="small text-muted">Besetzung in 10-14 Tagen</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-0 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="benefit-card entriks-feature-card">
+                            <i class="fa-solid fa-comments entriks-feature-icon"></i>
+                            <h5 class="fw-bold">SCM-Experten</h5>
+                            <p class="small text-muted">Deutschsprachig (B2/C1)</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-0 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="benefit-card entriks-feature-card">
+                            <i class="fa-solid fa-chart-line entriks-feature-icon"></i>
+                            <h5 class="fw-bold">Skalierbar</h5>
+                            <p class="small text-muted">Keine Recruiting-Kosten</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 mb-0 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="benefit-card entriks-feature-card">
+                            <i class="fa-solid fa-gears entriks-feature-icon"></i>
+                            <h5 class="fw-bold">ERP Integration</h5>
+                            <p class="small text-muted">SAP, MS Dynamics bereit</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+      
+<!-- SECTION 1 -->
+       <section id="bottlenecks" class="pp-about-section section-padding fix section-bg">
+    <div class="container">
+        <div class="pp-section-title text-center mb-0">
+            <span class="pp-sub-title wow fadeInUp">DAS SCM-PROBLEM 2026</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                Rollen bleiben zu lange unbesetzt – die Auswirkungen sind enorm
+            </h2>
+        </div>
+        <div class="scm-bento-grid">
+            <article class="scm-bento-hero-card wow img-custom-anim-left" data-wow-duration="1.3s" data-wow-delay="0.3s">
+                <div class="scm-bento-hero-content">
+                    <span class="scm-bento-days">45+ Tage</span>
+                    <p class="scm-bento-quote">„Mehr als 40% der SCM-Rollen bleiben über 45 Tage unbesetzt – mit direkten Auswirkungen auf Liefertreue und Kosten.“</p>
+                </div>
+            </article>
+            <div class="scm-bento-problems">
+                <div class="pain-points-box wow fadeInUp" data-wow-delay=".35s">
+                    <h4 class="pain-points-title mb-3">Die 7 größten Engpässe:</h4>
+                    <ul class="list-unstyled pain-points-list">
+                        <li><i class="fa-solid fa-triangle-exclamation"></i><span>Kaum qualifizierte Bewerber</span></li>
+                        <li><i class="fa-solid fa-triangle-exclamation"></i><span>Lange Time‑to‑Hire (35–90 Tage)</span></li>
+                        <li><i class="fa-solid fa-triangle-exclamation"></i><span>Kostenintensive Headhunter</span></li>
+                        <li><i class="fa-solid fa-triangle-exclamation"></i><span>Überlastung von Einkauf &amp; Disposition</span></li>
+                        <li><i class="fa-solid fa-triangle-exclamation"></i><span>Instabile Lieferketten durch Vakanzen</span></li>
+                        <li><i class="fa-solid fa-triangle-exclamation"></i><span>Fehlende Einarbeitungskapazitäten</span></li>
+                        <li><i class="fa-solid fa-triangle-exclamation"></i><span>Keine Skalierbarkeit bei Peaks</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- SECTION 2 -->
+        <section id="solution" class="pp-offer-section entriks-solution-section section-padding fix section-bg">
+            <div class="container">
+                <div class="pp-section-title text-center">
+                    <span class="pp-sub-title solution-tag wow fadeInUp">
+                       DIE ENTRIKS LÖSUNG
+                        <span class="pp-style-2"></span>
+                    </span>
+                    <h2 class="wow fadeInUp solution-title" data-wow-delay=".3s">
+                     Die moderne Lösung: deutsch- oder englischsprachige SCM-Experten aus dem ENTRIKS Hub
+                    </h2>
+                    <p class="wow fadeInUp solution-subheadline" data-wow-delay=".4s">
+                Unsere Teams unterstützen remote oder hybrid und übernehmen operative Aufgaben exakt nach Ihren Prozessen:
+            </p>
+                 </div>
+                <div class="row gy-5 gx-4">
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay=".3s">
+        <div class="pp-offer-box-item entriks-role-card w-100">
+            <div class="pp-offer-icon">
+                <i class="fa-solid fa-boxes-stacked"></i>
+            </div>
+            <div class="pp-offer-content">
+                <span class="role-tag">Core SCM Ops</span>
+                <h4>
+                    Disposition & Bedarfsermittlung
+                </h4>
+                <div class="role-meta"><i class="fa-solid fa-circle-check"></i>Typische SLA: Start in 10–14 Tagen</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay=".5s">
+        <div class="pp-offer-box-item entriks-role-card w-100">
+            <div class="pp-offer-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="pp-offer-content">
+                <span class="role-tag">Procurement</span>
+                <h4>
+                    Einkaufsmanagement &amp; Order Handling
+                </h4>
+                <div class="role-meta"><i class="fa-solid fa-circle-check"></i>ERP-ready Workflows</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay=".7s">
+        <div class="pp-offer-box-item entriks-role-card w-100">
+            <div class="pp-offer-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="pp-offer-content">
+                <span class="role-tag">Supplier Care</span>
+                <h4>
+                    Lieferantenkommunikation
+                </h4>
+                <div class="role-meta"><i class="fa-solid fa-circle-check"></i>Deutschsprachig B2/C1</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay=".3s">
+        <div class="pp-offer-box-item entriks-role-card w-100">
+            <div class="pp-offer-icon">
+                <i class="fa-solid fa-chart-column"></i>
+            </div>
+            <div class="pp-offer-content">
+                <span class="role-tag">Inventory</span>
+                <h4>
+                    Bestandsüberwachung
+                </h4>
+                <div class="role-meta"><i class="fa-solid fa-circle-check"></i>Transparentes KPI-Reporting</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay=".5s">
+        <div class="pp-offer-box-item entriks-role-card w-100">
+            <div class="pp-offer-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="pp-offer-content">
+                <span class="role-tag">Planning</span>
+                <h4>
+                    Forecasting Support
+                </h4>
+                <div class="role-meta"><i class="fa-solid fa-circle-check"></i>Skalierbar bei Peaks</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex wow fadeInUp" data-wow-delay=".7s">
+        <div class="pp-offer-box-item entriks-role-card w-100">
+            <div class="pp-offer-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="pp-offer-content">
+                <span class="role-tag">ERP &amp; Master Data</span>
+                <h4>
+                   ERP-Datenpflege (SAP, BC, NAV, SAGE)
+                </h4>
+                <div class="role-meta"><i class="fa-solid fa-circle-check"></i>Nahtlose Systemintegration</div>
+            </div>
+        </div>
+    </div>
+</div>
+                
+         <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="pp-security-bar">
+                    <strong>In 10–14 Tagen produktiv – ohne Recruiting-Aufwand 
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3-- -->
+        <section id="process" class="pp-how-work-section section-padding fix section-bg-2">
+            <div class="top-shape">
+                <img src="assets/img/home-1/feature/bg-shape.png" alt="img">
+            </div>
+            <div class="line-shape">
+                <img src="assets/img/home-1/feature/line.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="pp-section-title text-center">
+                    <span class="pp-sub-title wow fadeInUp">
+                        WIE DAS ENTRIKS SETUP FUNKTIONIERT ?
+                        <span class="pp-style-2"></span>
+                    </span>
+                    <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                      Ihr Weg zur SCM-Entlastung – einfach, schnell, transparent
+                    </h2>
+                 </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="pp-how-work-items">
+                            <div class="process-step-icon" aria-hidden="true">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <h6>Schritt 1</h6>
+                            <h3>Bedarfsanalyse (10 Minuten)</h3>
+                            <p>
+                                Wir identifizieren die 1–2 Rollen mit dem größten Hebel.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="pp-how-work-items pp-style-2">
+                            <div class="process-step-icon" aria-hidden="true">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                            <h6>Schritt 2</h6>
+                            <h3>Team-Matching (48–72 Stunden)</h3>
+                            <p>
+                               Wir präsentieren geprüfte deutschsprachige SCM-Experten aus unserem Talentpool.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="pp-how-work-items">
+                            <div class="process-step-icon" aria-hidden="true">
+                                <i class="fa-solid fa-laptop-arrow-down"></i>
+                            </div>
+                            <h6>Schritt 3</h6>
+                            <h3>Onboarding (5–7 Tage)</h3>
+                            <p>
+                                Die Mitarbeitenden arbeiten in Ihren Tools, Prozessen & Ihrem ERP – wie interne Kollegen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- SECTION 4--Case Study -->
+<section id="case-study" class="pp-key-feature-section entriks-case-study section-padding pb-0 fix">
+    <div class="container">
+        <div class="pp-key-feature-wrapper">
+            <div class="row g-4 align-items-end">
+                <div class="col-lg-5">
+                    <div class="case-study-kpi-panel wow fadeInUp" data-wow-delay=".35s">
+                        <img src="assets/img/home-1/feature/33.png" alt="ENTRIKS Case Study" class="case-study-kpi-photo">
+                        <p class="case-study-kpi-intro">Die wichtigsten KPI-Effekte nach 7 Tagen im Einsatz</p>
+                        <div class="case-study-kpis">
+                            <div class="case-study-kpi">
+                                <div class="case-study-kpi-ring" style="--progress: 30;">
+                                    <div class="case-study-kpi-value"><span class="counter kpi-number" data-target="30">0</span>%</div>
+                                </div>
+                                <div class="case-study-kpi-label">kürzere Bestellzyklen</div>
+                            </div>
+                            <div class="case-study-kpi">
+                                <div class="case-study-kpi-ring" style="--progress: 20;">
+                                    <div class="case-study-kpi-value"><span class="counter kpi-number" data-target="20">0</span>%</div>
+                                </div>
+                                <div class="case-study-kpi-label">weniger Materialengpässe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="pp-key-feature-content">
+                        <div class="pp-section-title mb-0">
+                            <span class="pp-sub-title wow fadeInUp">DIE CASE STUDY</span>
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                                Maschinenbauer stabilisiert seine Disposition – in nur 7 Tagen
+                            </h2>
+                        </div>
+
+                        <div class="case-study-text-block mt-4 wow fadeInUp" data-wow-delay=".4s">
+                            <h5 class="case-study-block-title is-problem"><i class="fa-solid fa-circle-xmark"></i>Das Problem</h5>
+                            <p class="pp-text mb-3">
+                                Monatelange Vakanz → Lieferverzögerungen → massiv überlastetes Team.
+                            </p>
+                        </div>
+
+                        <div class="case-study-text-block wow fadeInUp" data-wow-delay=".5s">
+                            <h5 class="case-study-block-title is-solution"><i class="fa-solid fa-circle-check"></i>Die ENTRIKS Lösung</h5>
+                            <ul class="list-unstyled pp-text case-study-solution-list">
+                                <li><i class="fa-solid fa-circle-check"></i><span>1 Supply Planner + 1 Procurement Assistant</span></li>
+                                <li><i class="fa-solid fa-circle-check"></i><span>Start innerhalb von 7 Tagen</span></li>
+                                <li><i class="fa-solid fa-circle-check"></i><span>Voll integriert in SAP</span></li>
+                            </ul>
+
+                            <div class="case-study-timeline wow fadeInUp" data-wow-delay=".6s">
+                                <div class="case-study-timeline-track">
+                                    <div class="case-study-milestone">
+                                        <span class="case-study-day">Tag 1</span>
+                                        <div class="case-study-dot"></div>
+                                        <p>Bedarfsanalyse &amp; Rollendefinition</p>
+                                    </div>
+                                    <div class="case-study-milestone">
+                                        <span class="case-study-day">Tag 4</span>
+                                        <div class="case-study-dot"></div>
+                                        <p>Experten-Matching &amp; Vorstellung</p>
+                                    </div>
+                                    <div class="case-study-milestone">
+                                        <span class="case-study-day">Tag 7</span>
+                                        <div class="case-study-dot"></div>
+                                        <p>SAP Integration &amp; Projektstart</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="case-study-text-block wow fadeInUp" data-wow-delay=".7s">
+                            <h5 class="case-study-block-title is-results"><i class="fa-solid fa-chart-line"></i>Die Ergebnisse</h5>
+                            <ul class="list-unstyled pp-text case-study-results-list">
+                                <li><i class="fa-solid fa-check"></i><span>30% kürzere Bestellzyklen</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>20% weniger Materialengpässe</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Deutliche Entlastung von Einkauf &amp; HR</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-5">
+                            <a href="assets/downloads/Mini Case Study SCM (1).pdf" download class="pp-theme-btn wow fadeInUp" data-wow-delay=".8s">
+                                                            Case Study herunterladen <i class="fa-solid fa-download ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- SECTION 5 --Downloads -->
+<section id="downloads" class="pp-resource-section section-padding fix" style="background-color: #fcfaff;">
+    <div class="container">
+        <div class="pp-section-title text-center mb-5">
+            <span class="pp-sub-title wow fadeInUp">EXPERTEN-WISSEN</span>
+            <h2 class="wow fadeInUp" data-wow-delay=".3s">Ihre kostenlosen SCM‑Ressourcen</h2>
+            <p class="mt-2 opacity-75">Holen Sie sich das Wissen, mit dem Mittelständler heute skalieren</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="pp-resource-card d-flex flex-column h-100 p-4 shadow-sm bg-white text-center" style="border-radius: 15px; border: 1px solid #eee; min-height: 345px;">
+                    <div class="flex-grow-1">
+                        <div class="icon-box mb-3" style="font-size: 40px; color: #8a2be2;">
+                            <i class="fa-solid fa-list-check"></i>
+                        </div>
+                        <h4 style="min-height: 60px;">Checkliste: Die 7 größten Engpässe im SCM&#8209;Recruiting</h4>
+                        <ul class="list-unstyled my-3 small text-muted" style="min-height: 24px;">
+                            <li style="display: inline-flex; align-items: center; white-space: nowrap;"><i class="fa-solid fa-check me-2"></i>PDF | inkl. Self&#8209;Assessment</li>
+                        </ul>
+                    </div>
+                    <a href="assets/downloads/Checkliste SCM (1).pdf" download="Entriks-Checkliste-SCM.pdf" class="pp-theme-btn btn-sm w-100 mt-auto">Download <i class="fa-solid fa-download ms-2"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="pp-resource-card d-flex flex-column h-100 p-4 shadow-sm bg-white text-center" style="border-radius: 15px; border: 1px solid #eee; min-height: 335px;">
+                    <div class="flex-grow-1">
+                        <div class="icon-box mb-3" style="font-size: 40px; color: #8a2be2;">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h4 style="min-height: 60px;">Whitepaper: SCM in unter 14 Tagen</h4>
+                        <ul class="list-unstyled my-3 small text-muted" style="min-height: 20px;">
+                            <li style="display: inline-flex; align-items: center; white-space: nowrap;"><i class="fa-solid fa-check me-2"></i>Prozessmodelle, Rollen, Kostenstrukturen</li>
+                        </ul>
+                    </div>
+                    <a href="assets/downloads/white paper.pdf" download="Entriks-Whitepaper-SCM.pdf" class="pp-theme-btn btn-sm w-100 mt-auto">Download <i class="fa-solid fa-download ms-2"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="pp-resource-card d-flex flex-column h-100 p-4 shadow-sm bg-white text-center" style="border-radius: 15px; border: 1px solid #eee; min-height: 345px;">
+                    <div class="flex-grow-1">
+                        <div class="icon-box mb-3" style="font-size: 40px; color: #8a2be2;">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
+                        <h4 style="min-height: 60px;">Mini&#8209;Video: SCM Outsourcing in 90 Sekunden</h4>
+                        <p class="small text-muted my-3" style="min-height: 20px;">&nbsp;</p>
+                    </div>
+                    <a href="#video-explanation" class="pp-theme-btn btn-sm w-100 mt-auto">Jetzt ansehen <i class="fa-solid fa-play ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 pt-3">
+           
+        </div>
+    </div>
+</section>
+
+ <!-- SECTION 6 --VIDEO -->
+<section id="video-explanation" class="pp-pricing-section section-padding fix section-bg-2">
+    <div class="top-shape">
+        <img src="assets/img/home-1/feature/bg-shape.png" alt="img">
+    </div>
+    <div class="container">
+        <div class="pp-section-title text-center">
+            <span class="pp-sub-title wow fadeInUp">
+                VIDEO ERKLÄRBEREICH
+                <span class="pp-style-2"></span>
+            </span>
+            <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">
+                SCM Outsourcing in 90 Sekunden erklärt
+            </h2>
+            <p class="text-white mt-4 mx-auto wow fadeInUp" data-wow-delay=".4s" style="max-width: 800px; opacity: 0.9;">
+                Erfahren Sie, wie mittelständische Unternehmen ihre SCM-Prozesse stabilisieren – ohne Recruiting, ohne Wartezeiten, ohne Kostenrisiko.
+            </p>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+    <div class="col-lg-8 col-md-10 wow fadeInUp" data-wow-delay=".5s">
+        <div class="video-wrap-smaller">
+            <div class="video-container shadow-lg" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; background: #000;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    src="https://www.youtube.com/embed/VIDEO_ID?rel=0" 
+                    title="SCM Outsourcing Video" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- SECTION 7 --Ihre Vorteile -->
+<section id="why-entriks" class="benefits-simple-section section-padding">
+    <div class="container">
+        <div class="benefits-simple-head text-center wow fadeInUp">
+            <p class="benefits-simple-kicker">IHRE VORTEILE</p>
+            <h2>Warum über 150+ mittelständische Unternehmen auf ENTRIKS setzen</h2>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
+                <article class="benefits-simple-card">
+                    <span class="benefits-icon"><i class="fa-solid fa-user-tie"></i></span>
+                    <h5>Deutschsprachige SCM-Experten <br> (B2-C1)</h5>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                <article class="benefits-simple-card">
+                    <span class="benefits-icon"><i class="fa-solid fa-diagram-project"></i></span>
+                    <h5>Nahtloses Prozess- und ERP-Verständnis</h5>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                <article class="benefits-simple-card">
+                    <span class="benefits-icon"><i class="fa-solid fa-headset"></i></span>
+                    <h5>Flexible Skalierung ohne Risiko</h5>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+                <article class="benefits-simple-card">
+                    <span class="benefits-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    <h5>Bis zu 50% geringere Personalkosten</h5>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
+                <article class="benefits-simple-card">
+                    <span class="benefits-icon"><i class="fa-solid fa-microchip"></i></span>
+                    <h5>EU-Datenschutz und ISO-Prozesse</h5>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                <article class="benefits-simple-card">
+                    <span class="benefits-icon"><i class="fa-solid fa-handshake-angle"></i></span>
+                    <h5>Kulturell passend zum D-A-CH-Mittelstand</h5>
+                </article>
+            </div>
+        </div>
+
+        <p class="benefits-simple-note wow fadeInUp" data-wow-delay=".7s">
+            <i class="fa-solid fa-shield-check"></i>
+            <strong>Sichere Infrastruktur + DSGVO:</strong> 100% Datenschutz nach europäischen Standards.
+        </p>
+    </div>
+</section>
+
+
+        <!-- Section 8- Social Proof -->
+      <section id="social-proof" class="pp-testimonial-section section-padding fix">
+    <div class="container">
+        
+        <div class="pp-industry-wall text-center mb-5 pb-4 wow fadeInUp">
+    <h5 class="mb-4 text-uppercase" style="letter-spacing: 2px; color: #8a2be2; font-size: 14px; font-weight: 700;">FACHWISSEN IN:</h5>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+        <span class="industry-pill">Chemie</span>
+        <span class="industry-pill">Maschinenbau</span>
+        <span class="industry-pill">Automotive</span>
+        <span class="industry-pill">E-Commerce</span>
+        <span class="industry-pill">Logistik</span>
+    </div>
+    <section class="erp-trust-bar">
+        <p class="erp-trust-label">EXPERTISE IN FÜHRENDEN ERP-SYSTEMEN</p>
+        <div class="erp-trust-logos">
+            <div class="erp-logo-item">
+                <img class="erp-logo-sap" src="https://cdn.simpleicons.org/sap/0FAAFF" alt="SAP" loading="lazy">
+            </div>
+            <div class="erp-logo-item erp-logo-microsoft">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="35" viewBox="0 0 273 54" aria-label="Microsoft" role="img">
+                  <path fill="#f25022" d="M0 0h25.4v25.4H0z"/>
+                  <path fill="#7fbb00" d="M28.6 0h25.4v25.4H28.6z"/>
+                  <path fill="#00a4ef" d="M0 28.6h25.4V54H0z"/>
+                  <path fill="#ffb900" d="M28.6 28.6h25.4V54H28.6z"/>
+                  <text x="65" y="42" font-family='Segoe UI, Arial' font-weight='600' font-size='38' fill='#737373'>Microsoft</text>
+                </svg>
+            </div>
+            <div class="erp-logo-item">
+                <img class="erp-logo-oracle" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle" loading="lazy">
+            </div>
+            <div class="erp-logo-item">
+                <img class="erp-logo-sage" src="https://cdn.simpleicons.org/sage/00DC82" alt="Sage" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <div class="mt-4"></div>
+</div>
+
+        <div class="pp-section-title-area">
+            <div class="pp-section-title">
+                <span class="pp-sub-title wow fadeInUp">STIMMEN UNSERER KUNDEN</span>
+                <h2 class="wow fadeInUp" data-wow-delay=".3s">
+                    Was unsere Partner sagen
+                </h2>
+            </div>
+            <div class="pp-array-buttons wow fadeInUp" data-wow-delay=".5s">
+                <button class="array-prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+                <button class="array-next"><i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+        </div>
+
+        <div class="swiper pp-testimonial-slider">
+            <div class="swiper-wrapper">
+                
+               <div class="swiper-slide">
+    <div class="pp-testimonial-card">
+        <div class="testimonial-highlight-box">
+            <p class="testimonial-quote">
+                „ENTRIKS hat uns in einer kritischen Phase den Rücken freigehalten.“
+            </p>
+            <div class="pp-client-info-item" style="display: flex; align-items: center; gap: 15px;">
+                <div class="pp-client-image" style="width: 52px; height: 52px; flex-shrink: 0;">
+                    <img src="assets/img/home-1/testimonial/women.png" alt="Daniela Bergmann" 
+                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+                <div class="pp-content">
+                    <h5 class="testimonial-name">Daniela Bergmann</h5>
+                    <span class="testimonial-role">Strategischer Einkauf & Procurement</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="pp-testimonial-card">
+        <div class="testimonial-highlight-box testimonial-highlight-box--gray">
+            <p class="testimonial-quote">
+                „Die SCM-Entlastung hat unsere Liefertreue sofort verbessert.“
+            </p>
+            <div class="pp-client-info-item" style="display: flex; align-items: center; gap: 15px;">
+                <div class="pp-client-image" style="width: 52px; height: 52px; flex-shrink: 0;">
+                    <img src="assets/img/home-1/testimonial/man.png" alt="Holger Huber" 
+                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+                <div class="pp-content">
+                    <h5 class="testimonial-name">Holger Huber</h5>
+                    <span class="testimonial-role">Leitung Supply Chain & Logistik</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Section 9- CALLaction-->
+  <section id="call-to-action" class="pp-cta-section section-padding fix theme-bg" style="padding-bottom: 0;">
+    <div class="top-shape">
+        <img src="assets/img/home-1/cta/bg.png" alt="img">
+    </div>
+    <div class="container">
+        <div class="pp-cta-wrapper">
+            <div class="row g-4 align-items-stretch">
+                
+                <div class="col-lg-7">
+                    <div class="pp-cta-content">
+                        <h2 class="wow fadeInUp text-white" data-wow-delay=".3s">
+                            Lassen Sie uns in 10 Minuten klären, wie wir Ihre SCM‑Rollen besetzen können – ohne Verzögerung
+                        </h2>
+                        <div class="pp-cta-button">
+                            <a href="#contact-form" class="pp-theme-btn wow fadeInUp" data-wow-delay=".3s" style="background: white; color: #8a2be2;">
+                                Kostenlosen Quick-Call buchen <i class="fa-solid fa-phone-volume ms-2"></i>
+                            </a>
+                        </div>
+                        <div class="mt-4 wow fadeInUp" data-wow-delay=".6s">
+                            <p class="text-white small">
+                               Oder schreiben Sie uns:
+                               <a href="mailto:kontakt@entriks.com" class="text-white text-decoration-underline">kontakt@entriks.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 d-none d-lg-block align-self-end cta-girl-col">
+                    <img src="assets/img/girl3.png" alt="Entriks Support" class="cta-girl-img wow fadeInRight" data-wow-delay=".4s">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Section 10- Contact form-->
+<section id="contact-form" class="pp-contact-section section-padding pb-5" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="pp-contact-form-card shadow-lg p-4 px-lg-5" style="border-radius: 18px; border-top: 6px solid #8a2be2; margin-top: -50px; position: relative; z-index: 10; background: white;">
+                    
+                    <div class="section-title mb-4 text-center">
+                        <span class="pp-sub-title" style="font-size: 13px; letter-spacing: 1px;">KONTAKT</span>
+                        <h2 style="font-size: 28px; font-weight: 700;">Jetzt Gespräch anfragen</h2>
+                        <p class="mt-2" style="font-size: 15px; color: #555;">Hinterlassen Sie uns Ihre Details. Wir melden uns kurzfristig bei Ihnen.</p>
+                    </div>
+
+                    <form action="php/send-mail.php" method="POST" class="pp-contact-form">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" style="font-size: 15px; color: #333;">Name*</label>
+                                <input type="text" name="name" class="form-control py-2" style="font-size: 14px;" placeholder="Ihr vollständiger Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" style="font-size: 15px; color: #333;">Unternehmen*</label>
+                                <input type="text" name="unternehmen" class="form-control py-2" style="font-size: 14px;" placeholder="Name Ihrer Firma" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" style="font-size: 15px; color: #333;">Ihre Rolle</label>
+                                <input type="text" name="rolle" class="form-control py-2" style="font-size: 14px;" placeholder="z.B. Logistikleiter" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" style="font-size: 15px; color: #333;">E-Mail Adresse*</label>
+                                <input type="email" name="email" class="form-control py-2" style="font-size: 14px;" placeholder="name@firma.de" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" style="font-size: 15px; color: #333;">Telefonnummer</label>
+                                <input type="tel" name="telefon" class="form-control py-2" style="font-size: 14px;" placeholder="+49 123 456789" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" style="font-size: 15px; color: #333;">Aktuelle Suchanfrage</label>
+                                <select name="suchanfrage" class="form-select py-2" style="font-size: 14px;" required>
+                                    <option value="" selected disabled>Bitte wählen...</option>
+                                    <option>Operativer Einkauf</option>
+                                    <option>Strategischer Einkauf</option>
+                                    <option>Supply Chain Management</option>
+                                    <option>Logistik-Planung</option>
+                                    <option>Sonstiges</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-bold" style="font-size: 15px; color: #333;" >Wann sollen wir Sie anrufen?</label>
+                                <input type="text" name="anrufzeit" class="form-control py-2" style="font-size: 14px;" placeholder="z.B. Morgen Vormittag ab 10:00 Uhr" required>
+                            </div>
+
+                            <div class="col-12 text-center mt-4 pt-2">
+                                <button type="submit" class="pp-theme-btn w-100 py-3 shadow-sm" style="font-size: 17px; font-weight: 600; border-radius: 8px;">
+                                    Jetzt Gespräch anfragen <i class="fa-solid fa-paper-plane ms-2"></i>
+                                </button>
+                                <p class="small mt-3 text-muted" style="font-size: 13px;">
+                                    <i class="fa-solid fa-lock me-1"></i> Ihre Daten sind sicher und werden DSGVO-konform behandelt.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+         <!-- Footer Section Start -->
+        <footer class="pp-footer-section section-bg-2">
+            <div class="top-shape">
+                <img src="assets/img/home-1/bg-shape.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="pp-footer-widget-wrapper">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-5 col-lg-7 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="pp-footer-widget-items">
+                                <div class="pp-widget-head">
+                                    <a href="index.html" class="pp-footer-logo">
+                                        <img src="assets/img/logo/entriks_logo_bigger.webp" alt="img" style="max-width: 190px; height: auto;">
+                                    </a>
+                                </div>
+                                <div class="pp-footer-content">
+                                    <p>
+                                      <strong>ENTRIKS Outsourcing Hub</strong><br>
+                                        Ihr globaler Partner für skalierbares Supply Chain Outsourcing und leistungsstarke SCM-Unterstützung.
+                                    </p>
+                                    <br>
+                                    <p>
+                                      <i class="fa-solid fa-location-dot me-2"></i> 
+                                       Lot Vaku L2.1, 10000 Pristina, Kosovo
+                                    </p>
+                                    <div class="social-icon d-flex align-items-center">
+                                        <a href="https://www.facebook.com/ENTRIKS/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/entriks_/"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/entriks"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="pp-footer-widget-items">
+                                <div class="pp-widget-head">
+                                    <h3>Übersicht</h3>
+                                </div>
+                                <ul class="pp-list-area">
+                                    <li>
+                                        <a href="#hero">
+                                            Startseite
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#solution">
+                                            Leistungen
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#process">
+                                           Ablauf
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#case-study">
+                                           Case Study
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#downloads">
+                                         Ressourcen
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact-form">
+                                         Kontakt
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-lg-2 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="pp-footer-widget-items">
+                                <div class="pp-widget-head">
+                                    <h3>Bereit für den Start?</h3>
+                                </div>
+                                <div class="pp-contact-info">
+                                    <div class="pp-icon">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+                                    <div class="pp-content">
+                                        <h6>
+                                            <a href="mailto:kontakt@entriks.com" style="font-size: 15px; font-weight: 400; text-transform: none;">
+                                                kontakt@entriks.com
+                                            </a>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="pp-contact-info mb-0">
+                                    <div class="pp-icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div class="pp-content">
+                                        <h6>
+                                            <a href="tel:+38343889344">+383 43 889 344</a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom3">
+                <div class="container">
+                    <div class="pp-footer-bottom-wrapper">
+                        <p class="wow fadeInUp" data-wow-delay=".3s">
+                          Copyright© <span id="current-year"></span> <b>ENTRIKS.</b> Alle Rechte vorbehalten
+                        </p>
+                        <ul class="pp-footer-list wow fadeInUp" data-wow-delay=".5s">
+                            <li>
+                                <a href="impressum.html" style="font-size: 14px;">Impressum</a>
+                            </li>
+                            <li>
+                                <a href="datenschutz.html" style="font-size: 14px;">Datenschutz</a>
+                            </li>
+                            <li>
+                                <a href="agb.html" style="font-size: 14px;">AGB</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <!--<< Counterup Js >>-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/main.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const caseStudySection = document.querySelector('#case-study');
+                if (!caseStudySection) return;
+
+                const counterElements = caseStudySection.querySelectorAll('.counter');
+                const kpiCards = caseStudySection.querySelectorAll('.case-study-kpi');
+                let hasAnimated = false;
+
+                const animateCounter = (element, duration) => {
+                    const target = parseInt(element.getAttribute('data-target') || '0', 10);
+                    const startTime = performance.now();
+
+                    const step = (currentTime) => {
+                        const progress = Math.min((currentTime - startTime) / duration, 1);
+                        element.textContent = String(Math.floor(progress * target));
+
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            element.textContent = String(target);
+                        }
+                    };
+
+                    requestAnimationFrame(step);
+                };
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting && !hasAnimated) {
+                                hasAnimated = true;
+                                kpiCards.forEach((card) => card.classList.add('is-visible'));
+                                counterElements.forEach((counter) => animateCounter(counter, 2000));
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.35
+                    }
+                );
+
+                observer.observe(caseStudySection);
+            });
+        </script>
+    </body>
+</html>

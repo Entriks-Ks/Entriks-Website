@@ -1,0 +1,18 @@
+.brand-wrapper {
+   border-bottom: 1px solid #CCCBD13D;
+   padding-bottom: 120px;
+
+   @include breakpoint (max-xl){
+        padding-bottom: 100px;
+    }
+   
+    @include breakpoint (max-lg){
+        padding-bottom: 80px;
+    }
+
+    .brand-title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+

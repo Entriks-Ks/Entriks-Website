@@ -1,0 +1,518 @@
+.pp-footer-section {
+    position: relative;
+    z-index: 9;
+
+    .top-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        img {
+            @include imgw;
+        }
+    }
+
+    &::before {
+        @include before;
+        background-color: $pp-header-color;
+        top: -50%;
+        z-index: -1;
+    }
+}
+
+.pp-footer-widget-wrapper {
+    padding: 90px 0 100px;
+
+    @include breakpoint (max-lg) {
+         padding: 50px 0 80px;
+    }
+
+    .pp-footer-widget-items {
+        margin-top: 30px;
+
+        .pp-widget-head {
+            margin-bottom: 24px;
+
+            h3 {
+                color: $pp-white;
+            }
+        }
+
+        .pp-footer-content {
+            p {
+                max-width: 500px;
+                color: $pp-white
+            }
+
+            .social-icon {
+                gap: 15px;
+                margin-top: 40px;
+
+                a {
+                    font-size: 16px;
+                    display: block;
+                    color: $pp-white;
+                    -webkit-transition: all .4s ease-in-out;
+                    transition: all .4s ease-in-out;
+                    text-align: center;
+
+                    &:hover {
+                        color: $pp-theme-color;
+                    }
+                }
+            }
+        }
+
+        .pp-list-area {
+
+            li {
+                @include transition;
+                
+
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+
+                a {
+                   color: rgba(255, 255, 255, 0.7);
+                }
+
+                &:hover {
+                    margin-left: 5px;
+
+                    a {
+                        color: $pp-theme-color;
+                    }
+                }
+            }
+        }
+
+        .pp-contact-info {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 24px;
+
+            .pp-icon {
+                font-size: 20px;
+                color: $pp-theme-color;
+                color: $pp-white;
+            }
+
+            .pp-content {
+                h6 {
+                    font-family: $pp-body-font;
+                    font-size: 16px;
+                    font-weight: 400;
+
+                    a {
+                        color: $pp-white;
+                        line-height: 170%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.pp-style-2 {
+
+        .pp-footer-newsletter {
+            border-bottom: 1px solid rgba(204, 203, 209, 0.08);
+            padding-bottom: 48px;
+            @include flex;
+            gap: 88px;
+            margin-bottom: 20px;
+
+            @include breakpoint (max-xl) {
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-bottom: 0;
+            }
+
+            .pp-newsletter-content {
+                h2 {
+                    color: $pp-white;
+                    margin-bottom: 10px;
+                    font-size: 40px;
+
+                    @include breakpoint (max-xl) {
+                        font-size: 35px;
+                    }
+
+                    @include breakpoint (max-lg) {
+                        font-size: 30px;
+                    }
+
+                    @include breakpoint (max-sm) {
+                        font-size: 25px;
+                    }
+                }
+
+                p {
+                    max-width: 705px;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+
+            form {
+                max-width: 526px;
+                width: 100%;
+            }
+
+            .form-clt {
+                position: relative;
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    background-color: $pp-white;
+                    color: $pp-text-color;
+                    line-height: 1;
+                    padding: 18px 16px;
+                    border-radius: 100px;
+                    max-width: 515px;
+
+                    &::placeholder {
+                        color: $pp-text-color;
+                    }
+                }
+
+                .pp-theme-btn {
+                    position: absolute;
+                    top: 3px;
+                    right: 15px;
+                    bottom: 3px;
+                    padding: 12px 12px;
+
+                    i {
+                        color: $pp-white;
+                    }
+                    
+                    @include breakpoint (max-xxs){
+                       right: 3px;
+                    }
+                }
+            } 
+        }
+    }
+}
+
+.footer-bottom3 {
+    padding: 30px 0;
+    border-top: 1px solid rgba(205, 206, 208, 0.24);
+    background-color: $pp-header-color;
+
+    p {
+        color: $pp-white;
+
+        b {
+            color: $pp-theme-color;
+            opacity: 1;
+        }
+    }
+    
+        
+    .pp-footer-bottom-wrapper {
+        @include flex;
+        justify-content: space-between;
+
+        @include breakpoint (max-xl){
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+
+        .pp-footer-list {
+            @include flex;
+            gap: 30px;
+
+            @include breakpoint (max-sm){
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            li {
+                font-size: 16px;
+                font-weight: 400;
+
+                a {
+                   color: rgba(255, 255, 255, 0.7);
+
+                    &:hover {
+                        color: $pp-theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-widgets-wrapper-3 {
+    padding: 100px 0 123px;
+    position: relative;
+    z-index: 9;
+
+
+    @include breakpoint(max-xl){
+        padding: 60px 0 90px;
+    }
+
+    @include breakpoint(max-lg){
+        padding: 50px 0 70px;
+    }
+
+    .single-footer-widget {
+        margin-top: 30px;
+
+        .widget-head {
+            margin-bottom: 30px;
+
+            img {
+                width: 150px;
+            }
+
+            @include breakpoint (max-sm){
+               margin-bottom: 20px;
+            }
+
+            h3 {
+                font-weight: bold;
+                color: $pp-white;
+                font-size: 24px;
+                padding-bottom: 20px;
+                border-bottom: 2px solid $pp-white;
+                display: inline-block;
+            }
+        }
+
+        .footer-content {
+            p {
+                color: $pp-white;
+            }
+
+            .social-icon {
+                margin-top: 40px;
+                gap: 15px;
+                position: relative;
+                z-index: 9;
+
+                @include breakpoint (max-sm){
+                    margin-top: 20px;
+                }
+
+            a {
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+                font-size: 16px;
+                display: block;
+                color: rgba(255, 255, 255, .8);
+                transition: all .4s ease-in-out;
+                text-align: center;
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, .4);
+
+                    &:hover {
+                        background-color: $pp-theme-color;
+                        color: $pp-white;
+                        border: 1px solid transparent
+                    }
+                }
+            }
+
+            .footer-input {
+                position: relative;
+                margin-top: 40px;
+
+                input {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 18px 20px;
+                    width: 100%;
+                    border-radius: 8px;
+                    border: 1px solid rgba(255, 255, 255, .4);
+                    color: rgba(255, 255, 255, .8);
+
+                    &::placeholder {
+                        color: rgba(255, 255, 255, .5);
+                    }
+                }
+
+                .newsletter-btn {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    width: 60px;
+                    height: 55px;
+                    line-height: 60px;
+                    border-radius: 4px;
+                    text-align: center;
+                    background-color: $pp-theme-color;
+                    color: $pp-white;
+                    bottom: 5px;
+
+                    i {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .contact-info {
+                margin-top: 20px;
+
+                li {
+                    color: $pp-white;
+                    font-weight: 500;
+                    font-size: 16px;
+                    @include flex;
+                    gap: 10px;
+
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+
+                   i {
+                        font-size: 16px;
+                        color: $pp-theme-color;
+                        margin-right: 10px;
+                        font-size: 20px;
+                   }
+
+                   a {
+                        color: $pp-white;
+                   }
+                }
+            }
+
+            .payment-text {
+                font-size: 22px;
+                color: $pp-white;
+                border-top: 1px solid rgba(255, 255, 255, .3);
+                font-weight: 600;
+                padding-top: 30px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+            .brand-logo {
+                @include flex;
+                gap: 20px;
+    
+                li {
+                    border: 1px solid rgba(255, 255, 255, 0.50);
+                    padding: 5px 7px;
+                    border-radius: 6px;
+                }
+            }
+        
+        }
+
+       .list-area {
+            li {
+                @include transition;
+                font-weight: 500;
+
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    color: $pp-white;
+
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+
+                &:hover {
+                    margin-left: 5px;
+                    a {
+                        color: $pp-theme-color;
+                    }
+                }
+            }
+       }
+    }
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 9;
+    margin-bottom: 40px;
+
+    .footer-wrapper {
+        position: relative;
+        z-index: 9;
+        background-color: rgba(255, 255, 255, .15);
+        padding: 30px 40px;
+        border-radius: 16px;
+
+       @include breakpoint (max-lg){
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center !important;
+            margin-top: 30px;
+       }
+
+        p {
+            color: $pp-white;
+
+            a {
+               color: $pp-white;
+            }
+        }
+        
+        .brand-logo {
+            @include flex;
+            gap: 20px;
+
+            li {
+                border: 1px solid rgba(255, 255, 255, 0.50);
+                padding: 5px 7px;
+                border-radius: 6px;
+            }
+        }
+    
+    }
+
+    &.style-2 {
+        margin-bottom: 0;
+
+        .footer-wrapper {
+            background-color: transparent;
+            border-radius: 0;
+            border-top: 1px solid rgba(255, 255, 255, .4);
+             padding: 35px 0;
+        }
+
+        .footer-menu {
+            @include flex;
+            gap: 20px;
+
+            li {
+                a {
+                    color: $pp-white;
+                    background-image: linear-gradient($pp-theme-color,$pp-theme-color);
+                    background-position: 0 95%;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    display: inline-block;
+                    @include transition;
+
+                    &:hover {
+                        background-size: 100% 1px;
+                        color: $pp-theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+

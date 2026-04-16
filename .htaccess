@@ -1,5 +1,5 @@
 # Custom Error Pages
-ErrorDocument 404 /xampp/ENTRIKS/404.php
+ErrorDocument 404 /404.html
 
 # Security Headers
 <IfModule mod_headers.c>
@@ -11,7 +11,7 @@ ErrorDocument 404 /xampp/ENTRIKS/404.php
 # Enable Rewrite Engine
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /xampp/ENTRIKS/
+    RewriteBase /
     
     # Redirect www to non-www (optional, uncomment if needed)
     # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]

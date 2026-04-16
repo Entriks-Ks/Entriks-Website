@@ -1,0 +1,166 @@
+.pp-project-card-item {
+
+    .pp-project-image {
+        position: relative;
+        overflow: hidden;
+
+         &::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3); 
+            z-index: 1;
+            transition: top 0.5s ease;
+            border-radius: 16px;
+        }
+
+        img {
+            @include imgw;
+            border-radius: 16px;
+        }
+
+        .pp-project-content {
+            position: absolute;
+            left: 40px;
+            bottom: -40px;
+            background-color: $pp-white;
+            padding: 30px;
+            border-radius: 5px;
+            width: 323px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+
+            h3 {
+                margin-bottom: 10px;
+
+                a {
+                    &:hover {
+                        color: $pp-theme-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .pp-project-image {
+
+            &::before {
+                top: 0; 
+            }
+            .pp-project-content {
+                opacity: 1;
+                visibility: visible;
+                bottom: 40px;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.pp-project-details-wrapper {
+
+    .pp-project-details-image {
+        margin-bottom: 60px;
+
+        @include breakpoint (max-xl){
+          margin-bottom: 0;
+        }
+
+        img {
+            @include imgw;
+            border-radius: 8px;
+        }
+    }
+
+    .pp-details-box {
+        @include flex;
+        justify-content: space-between;
+        border: 1px solid #E5E5E5;
+        padding: 20px;
+
+
+        .pp-content {
+            h5 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+        }
+
+        .pp-icon {
+            width: 105px;
+            height: 105px;
+            line-height: 105px;
+            border-radius: 6px;
+            text-align: center;
+            background-color: $pp-theme-color;
+
+             @include breakpoint (max-sm) {
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+            }
+        }
+    }
+
+    .pp-project-details-content {
+        h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        .pp-project-sideber {
+            border-top: 1px solid #E5E5E5;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 40px 0;
+            @include flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+             @include breakpoint (max-xl) {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            .pp-sidebr-content {
+                .pp-icon {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-family: $pp-heading-font;
+                    font-size: 24px;
+                    font-weight: 600;
+                    max-width: 647px;
+                    line-height: 150%;
+                    margin-bottom: 0;
+                    color: $pp-header-color;
+
+                     @include breakpoint (max-xl) {
+                       font-size: 20px;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 0;
+
+                a {
+                    color: $pp-text-color;
+                }
+            }
+        }
+    }
+}
+

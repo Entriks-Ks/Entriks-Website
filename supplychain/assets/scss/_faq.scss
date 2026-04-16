@@ -1,0 +1,90 @@
+.pp-faq-wrapper {
+
+    .pp-faq-image {
+        max-width: 580px;
+
+        @include breakpoint (max-xl) {
+            max-width: initial;
+        }
+
+        img {
+            @include imgw;
+        }
+    }
+
+    .pp-faq-content {
+        margin-bottom: 100px;
+
+        @include breakpoint(max-lg){
+            margin-bottom: 80px;
+        }
+
+        .accordion-item {
+            border: 0;
+            border-radius: 10px;
+            border: 1px solid #E5E5E5;
+            background-color: $pp-white;
+            padding: 16px 20px;
+    
+            .accordion-header { 
+                .accordion-button { 
+                    font-weight: 800;
+                    color: $pp-header-color;
+                    border: 0;
+                    border-radius: 0;
+                    box-shadow: none;
+                    background-color: $pp-white;
+                    text-transform: capitalize;
+                    font-size: 20px;
+                    padding: 10px 0;
+
+                    @include breakpoint (max-sm) {
+                        font-size: 18px;
+                    }
+    
+                    &::after {
+                        content: "\f078";
+                        background: transparent;
+                        font-family: $fa;
+                        font-weight: 700;
+                        transition: all 0.3s ease-in-out !important;
+                        color: $pp-header-color;
+                        width: 35px;
+                        height: 35px;
+                        text-align: center;
+                        line-height: 35px;
+                        border-radius: 100px;
+                        
+                    }
+    
+                    &:not(.collapsed)::after {
+                        content: "\f078";
+                        background: transparent;
+                        font-family: $fa;
+                        font-weight: 700;
+                        color: $pp-white;
+                        border: 1px solid #E5E5E5;
+                        background-color: $pp-theme-color;
+                        border: 1px solid $pp-theme-color;
+                    }
+    
+                    &.collapsed {
+                        background-color: $pp-white;
+                        color: $pp-header-color;
+                    }
+                }
+            }
+    
+            .accordion-collapse { 
+    
+                .accordion-body {
+                    padding-left: 0;
+                    color: $pp-text-color;
+                    background-color: transparent;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

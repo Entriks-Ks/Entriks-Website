@@ -1,0 +1,185 @@
+.pp-cta-section {
+    margin: 0 40px;
+    border-radius: 48px;
+    position: relative;
+    z-index: 999;
+
+    @include breakpoint (max-sm) {
+        margin: 0 15px;
+     }
+
+    .top-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        img {
+            @include imgw;
+        }
+    }
+}
+
+.pp-cta-wrapper {
+
+    .pp-cta-image {
+        position: relative;
+        max-width: 415px;
+
+        @include breakpoint (max-xl) {
+            max-width: initial;
+        }
+
+        img {
+            @include imgw;
+            border-radius: 8px;
+             box-shadow: 0px 9px 72px 0px rgba(6, 11, 19, 0.10)
+        }
+
+        .pp-cta-image-2 {
+            position: absolute;
+            right: -150px;
+            top: 18px;
+            bottom: 15px;
+
+             @include breakpoint (max-xl) {
+                right: 0;
+            }
+        }
+
+        .pp-shape {
+            position: absolute;
+            right: -14px;
+            bottom: 117px;
+
+            @include breakpoint (max-xl) {
+                left: 0;
+                top: 0;
+                right: initial;
+                bottom: initial;
+            }
+        }
+
+        .pp-shape-2 {
+            position: absolute;
+            right: -172px;
+            bottom: 117px;
+
+            @include breakpoint (max-xl) {
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .pp-cta-content {
+        h2 {
+            color: $pp-white;
+        }
+
+        p {
+            color: $pp-white;
+            max-width: 652px;
+            margin-top: 24px;
+        }
+
+        .pp-cta-button {
+            margin-top: 48px;
+
+           .pp-theme-btn {
+                background: $pp-white;
+                color: $pp-header-color;
+
+                i {
+                    color: $pp-header-color;
+                }
+
+                &:hover {
+                    color: $pp-white;
+
+                    i {
+                        color: $pp-white;
+                    }
+                }
+           }
+        }
+    }
+}
+
+.pp-instagram-wrapper {
+   margin-left: -12%;
+   margin-right: -12%;
+   margin-top: 30px;
+
+   @include breakpoint (max-xxl){
+       margin-right: 0;
+       margin-left: 0;
+       margin-top: 0;
+    }
+
+    .pp-instagram-banner-items {
+        .pp-banner-image {
+            position: relative;
+    
+            @include breakpoint (max-md){
+                height: 450px;
+    
+                img {
+                    object-fit: cover
+                }
+            }
+    
+            @include breakpoint (max-sm){
+                height: 380px;
+            }
+    
+            img {
+                @include imgw;
+                border-radius: 6px;
+            }
+    
+            &::before {
+                @include before;
+                background: rgba(123, 31, 228, 0.7);
+                opacity: 0.6;
+                transform: scale(1, 0);
+                transition: transform 500ms ease;
+                transform-origin: bottom center;
+                z-index: 1;
+                border-radius: 18px;
+            }
+    
+            .icon {
+                position: absolute;
+                width: 68px;
+                height: 68px;
+                line-height: 68px;
+                text-align: center;
+                border-radius: 50%;
+                background: (linear-gradient(270deg, #A121CA 0%, #7B1FE4 100%));
+                font-size: 28px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 99;
+                color: $pp-white;
+                opacity: 0;
+                @include transition;
+            }
+        }
+    
+        &:hover {
+            .pp-banner-image {
+                &::before {
+                    transform: scale(1, 1);
+                    transform-origin: top center;
+                }
+                .icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

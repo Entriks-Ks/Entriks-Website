@@ -1,0 +1,145 @@
+.pp-testimonial-card {
+    margin-top: 30px;
+    
+    p {
+        max-width: 632px;
+        margin-bottom: 32px;
+    }
+
+    .pp-client-info-item {
+        @include flex;
+        gap: 16px;
+
+        .pp-client-image {
+            img {
+                @include imgw;
+                border-radius: 100%;
+            }
+        }
+
+        .pp-testimonial-content {
+            h5 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.pp-testimonial-item-2 {
+    text-align: center;
+
+    .star {
+        margin-bottom: 24px;
+        color: #F79239;
+    }
+
+    p {
+        font-size: 40px;
+        font-weight: 800;
+        color: $pp-white;
+        margin-bottom: 48px;
+        font-family: $pp-heading-font;
+        max-width: 1097px;
+        line-height: 120%;
+
+         @include breakpoint (max-xl) {
+            font-size: 30px;
+        }
+
+         @include breakpoint (max-lg) {
+            font-size: 25px;
+        }
+
+        @include breakpoint (max-sm) {
+            font-size: 18px;
+        }
+    }
+
+    h3 {
+        color: $pp-white;
+    }
+}
+
+.pp-testimonial-box-items-3 {
+    padding: 50px 35px;
+    margin-top: 30px;
+    background-color: $pp-white;
+    border-radius: 12px;
+    position: relative;
+    z-index: 9;
+
+    .pngwing-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .icon {
+        position: absolute;
+        right: 35px;
+        bottom: 55px;
+        color: $pp-theme-color;
+        opacity: .3;
+        font-size: 55px;
+    }
+
+    .star {
+        color: $pp-theme-color;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .client-info {
+        margin-top: 30px;
+        @include flex;
+        gap: 15px;
+
+        .client-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.testimonial-section-3 {
+    .swiper-slide.swiper-slide-active {
+
+        .pp-testimonial-box-items-3 {
+            background-color: $pp-theme-color;
+        
+            .pngwing-shape {
+              opacity: 1;
+              visibility: visible;
+            }
+
+            .star {
+                color: $pp-white;
+            }
+        
+            .icon {
+                color: $pp-white;
+                opacity: 1;
+            }
+
+            p {
+                color: $pp-white;
+            }
+        
+            .client-info {
+               .content {
+                    h4,span {
+                        color: $pp-white;
+                    }
+               }
+            }
+        }
+    }
+}
